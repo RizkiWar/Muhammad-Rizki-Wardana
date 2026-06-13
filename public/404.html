@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Tidak Ditemukan | E-Portfolio PPG Prajabatan 2026</title>
+  <meta name="description" content="Halaman yang Anda cari tidak tersedia di e-portfolio Fanny Fatchurrahman." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --coral: #FF6B6B;
+      --coral-dark: #E24A4A;
+      --teal: #2EC4B6;
+      --amber: #F1D7A6;
+      --gray-700: #2D3443;
+      --gray-500: #6E7787;
+      --gray-200: #DEE2E8;
+      --gradient-warm: linear-gradient(135deg, #FF6B6B, #F1D7A6);
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--gray-700);
+      background:
+        radial-gradient(circle at 20% 25%, rgba(46, 196, 182, 0.18), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.16), transparent 35%),
+        linear-gradient(180deg, #fbfdff 0%, #eef9ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      animation: fadeUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    .emoji {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 20px;
+      display: inline-block;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-weight: 800;
+      background: var(--gradient-warm);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-weight: 700;
+      color: #1A2030;
+      margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--gray-500);
+      margin: 0 auto 28px;
+      max-width: 440px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      background: var(--gradient-warm);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(255, 107, 107, 0.32);
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 12px 28px rgba(255, 107, 107, 0.4);
+    }
+
+    .btn.ghost {
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--gray-700);
+      border: 1px solid var(--gray-200);
+    }
+
+    .btn.ghost:hover {
+      transform: translateY(-2px);
+      background: #fff;
+    }
+
+    .quick-links {
+      font-size: 0.82rem;
+      color: var(--gray-500);
+    }
+
+    .quick-links a {
+      color: var(--coral-dark);
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.2s ease;
+    }
+
+    .quick-links a:hover {
+      color: var(--coral);
+      text-decoration: underline;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #E2E8F0;
+        background:
+          radial-gradient(circle at 20% 25%, rgba(46, 196, 182, 0.14), transparent 35%),
+          radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.12), transparent 35%),
+          linear-gradient(180deg, #0F172A 0%, #0B1220 100%);
+      }
+      h2 { color: #F8FAFC; }
+      p { color: rgba(226, 232, 240, 0.72); }
+      .btn.ghost {
+        background: rgba(30, 41, 59, 0.7);
+        color: #E2E8F0;
+        border-color: rgba(148, 163, 184, 0.18);
+      }
+      .btn.ghost:hover { background: rgba(30, 41, 59, 0.95); }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="emoji" aria-hidden="true">🧭</div>
+    <h1>404</h1>
+    <h2>Halaman tidak ditemukan</h2>
+    <p>Sepertinya halaman yang Anda cari sudah dipindah atau memang tidak pernah ada. Tidak masalah, mari kita kembali ke beranda.</p>
+
+    <div class="actions">
+      <a class="btn primary" href="/">← Kembali ke Beranda</a>
+      <a class="btn ghost" href="/#contact">Hubungi Saya</a>
+    </div>
+
+    <div class="quick-links">
+      Atau langsung ke
+      <a href="/#about">Tentang</a>·
+      <a href="/#portfolio">Artefak</a>·
+      <a href="/#analisis">Analisis</a>·
+      <a href="/#certificates">Sertifikat</a>
+    </div>
+  </main>
+</body>
+</html>

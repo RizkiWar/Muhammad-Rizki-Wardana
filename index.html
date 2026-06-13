@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="E-Portfolio Guru Profesional - PPG Prajabatan 2026. Dokumentasi perjalanan profesional, karya, dan refleksi pembelajaran matematika SD." />
+  <meta name="keywords" content="e-portfolio, PPG Prajabatan, guru profesional, matematika SD, pendidikan, portofolio guru" />
+  <meta name="author" content="Fanny Fatchurrahman" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="E-Portfolio | Guru Profesional PPG Prajabatan 2026" />
+  <meta property="og:description" content="Dokumentasi perjalanan profesional, karya, dan refleksi pembelajaran PPG Prajabatan 2026." />
+  <meta property="og:image" content="https://fannyf-ppg-2026.pages.dev/assets/img/hero-bg-ai-light.webp" />
+  <meta property="og:url" content="https://fannyf123.github.io/E_Portofolio_PPG_Prajabatan_2026/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>E-Portfolio | Guru Matematika SD - PPG Prajabatan 2026</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3B82F6" />
+
+  <!-- Dark mode FOUC prevention -->
+  <script>
+  (function(){
+    var t=localStorage.getItem('theme');
+    if(!t)t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    document.documentElement.setAttribute('data-theme',t);
+    if(localStorage.getItem('perfMode')==='1'){
+      document.documentElement.classList.add('perf-mode');
+    }
+  })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Intro Screen — Page Tear -->
+  <div class="intro-tear" id="introTear" aria-hidden="true">
+    <!-- Top half tears upward -->
+    <div class="intro-tear-half intro-tear-top"></div>
+    <!-- Bottom half tears downward -->
+    <div class="intro-tear-half intro-tear-bottom"></div>
+    <!-- Content centered on top of both halves -->
+    <div class="intro-panel-content">
+      <div class="intro-panel-logo">
+        <img src="assets/img/ppg-logo-clean.png" alt="Logo PPG Pendidikan Profesi Guru" width="120" height="120" />
+      </div>
+      <div class="intro-panel-title">E-Portfolio Matematika SD</div>
+      <div class="intro-panel-loading">
+        <div class="intro-panel-loading-fill"></div>
+      </div>
+      <div class="intro-panel-loading-status" id="introLoadingStatus" aria-live="polite">
+        Menyiapkan tampilan awal...
+      </div>
+      <div class="intro-panel-prompt">
+        <span>Scroll to view</span>
+        <small>Geser untuk membuka e-portfolio</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Chooser Screen -->
+  <div class="portfolio-chooser" id="portfolioChooser" aria-hidden="true">
+    <div class="chooser-content">
+      <div class="chooser-logo">
+        <img src="assets/img/ust-logo.png" alt="Logo UST" width="48" height="48" />
+      </div>
+      <h2 class="chooser-title">Pilih E-Portfolio</h2>
+      <p class="chooser-subtitle">Silakan pilih e-portfolio yang ingin Anda lihat</p>
+      <div class="chooser-cards">
+        <button class="chooser-card" data-portfolio="1">
+          <div class="chooser-card-badge">UTS</div>
+          <div class="chooser-card-icon">📚</div>
+          <h3>E-Portfolio 1</h3>
+          <p>Dokumentasi perjalanan profesional, karya, dan refleksi pembelajaran selama PPG Prajabatan 2026</p>
+          <div class="chooser-card-cta">Lihat E-Portfolio 1 →</div>
+        </button>
+        <button class="chooser-card" data-portfolio="2">
+          <div class="chooser-card-badge">UAS</div>
+          <div class="chooser-card-icon">🎯</div>
+          <h3>E-Portfolio 2</h3>
+          <p>Refleksi akhir Praktik Pengalaman Lapangan Terbimbing dan Filosofi Mengajar</p>
+          <div class="chooser-card-cta">Lihat E-Portfolio 2 →</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Floating Geometric Shapes (Hero) -->
+  <div class="floating-shapes" aria-hidden="true">
+    <div class="shape shape-circle"></div>
+    <div class="shape shape-square"></div>
+    <div class="shape shape-triangle"></div>
+    <div class="shape shape-circle small"></div>
+    <div class="shape shape-square small"></div>
+    <div class="shape shape-donut"></div>
+    <div class="shape shape-circle tiny"></div>
+    <div class="shape shape-square tiny"></div>
+    <div class="shape shape-cross"></div>
+    <div class="shape shape-diamond"></div>
+  </div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/img/ppg-logo-clean.png" alt="Logo PPG Pendidikan Profesi Guru" width="120" height="120" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Beranda</a></li>
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#education">Pendidikan</a></li>
+        <li><a href="#portfolio">Artefak</a></li>
+        <li><a href="#analisis">Analisis</a></li>
+        <li><a href="#penilaian">Penilaian</a></li>
+        <li><a href="#model-guru">Model Guru</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Mode Gelap/Terang">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="theme-toggle perf-toggle" id="perfToggle" aria-label="Toggle Performance Mode" title="Performance Mode">
+          <span class="perf-icon">⚡</span>
+        </button>
+        <button class="home-btn" id="homeBtn" aria-label="Kembali ke Pilihan Portfolio" title="Kembali ke Pilihan Portfolio">
+          <i class="fa-solid fa-house"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-greeting">
+          <span class="wave">👋</span> Halo, Saya
+        </div>
+        <h1 class="hero-name">
+          <span class="highlight">Fanny <br class="mobile-name-break" />Fatchurrahman</span>
+        </h1>
+        <p class="hero-role">
+          <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Saya adalah calon guru profesional bidang Matematika SD yang
+          berkomitmen menghadirkan pengalaman belajar yang menyenangkan, bermakna,
+          dan sesuai dengan perkembangan anak usia dini. Melalui pendekatan yang
+          berpusat pada peserta didik, saya berupaya mengembangkan kemampuan berpikir
+          logis, kreativitas, serta rasa percaya diri dalam matematika agar
+          siswa siap menghadapi tantangan di jenjang pendidikan yang lebih tinggi.
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">
+            <i class="fa-solid fa-folder-open"></i> Lihat Portofolio
+          </a>
+          <a href="#contact" class="btn btn-secondary"> <i class="fa-solid fa-envelope"></i> Hubungi Saya </a>
+        </div>
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/fanny-fatchurrahman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/fannyfatchur/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@fannyfatchurrahman6134" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fannyfatchurrahman@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="assets/img/profile.jpeg" alt="Foto Profil Fanny Fatchurrahman" width="300" height="300" />
+        </div>
+
+        <!-- Badges dipindah ke bawah gambar agar rapi dan tidak menutupi -->
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <span class="hero-badge-icon">&#127891;</span> PPG Prajabatan 2026
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon">&#128187;</span> Matematika SD
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon">&#128534;</span> Belajar Menyenangkan
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROFIL MAHASISWA SECTION
+       ============================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge coral"><i class="fa-solid fa-user"></i> Profil Mahasiswa</div>
+        <h2 class="section-title">Mengenal Saya Lebih Dekat</h2>
+        <p class="section-subtitle">
+          Narasi perjalanan hidup dan inspirasi menjadi guru matematika SD profesional
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <div class="about-image-card">
+            <img src="assets/img/profile-wisuda.webp" alt="Foto Wisuda Fanny Fatchurrahman" width="1200" height="800" />
+          </div>
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="stat-icon">
+                <svg viewBox="0 0 64 64" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="32" r="28" stroke="#3B82F6" stroke-width="3" fill="#EFF6FF"/>
+                  <circle cx="32" cy="32" r="14" fill="#3B82F6"/>
+                  <circle cx="32" cy="32" r="5" fill="#fff"/>
+                  <path d="M32 4v8M32 52v8M4 32h8M52 32h8" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M12 12l6 6M46 46l6 6M12 52l6-6M46 18l6-6" stroke="#EAB308" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="label">Berpusat<br />pada Siswa</div>
+            </div>
+            <div class="about-stat">
+              <div class="stat-icon">
+                <svg viewBox="0 0 64 64" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="20" width="48" height="32" rx="4" fill="#FFF7ED" stroke="#F97316" stroke-width="2.5"/>
+                  <rect x="16" y="28" width="12" height="16" rx="2" fill="#3B82F6"/>
+                  <rect x="32" y="28" width="16" height="6" rx="2" fill="#EAB308"/>
+                  <rect x="32" y="38" width="16" height="6" rx="2" fill="#22C55E"/>
+                  <path d="M20 8h24l4 12H16l4-12z" fill="#A855F7" stroke="#9333EA" stroke-width="1.5"/>
+                  <circle cx="32" cy="14" r="3" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="label">Kreatif &<br />Berinovasi</div>
+            </div>
+          </div>
+          <!-- Info Singkat -->
+          <div class="about-info-list">
+            <div class="about-info-item">
+              <div class="info-icon coral">📍</div>
+              <div class="info-text">
+                <div class="info-label">Asal Daerah</div>
+                <div class="info-value">Klaten, Jawa Tengah</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon teal">🎓</div>
+              <div class="info-text">
+                <div class="info-label">Program</div>
+                <div class="info-value">PPG Prajabatan 2026</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon lavender">🏫</div>
+              <div class="info-text">
+                <div class="info-label">Sekolah PPL</div>
+                <div class="info-value">SD Negeri Klaten</div>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <div class="info-icon amber">📐</div>
+              <div class="info-text">
+                <div class="info-label">Mata Pelajaran</div>
+                <div class="info-value">Matematika SD</div>
+              </div>
+            </div>
+          </div>
+          <!-- Kutipan Penguat -->
+          <blockquote class="profil-quote reveal">
+            <p>
+              <em>"Matematika adalah bahasa universal yang melatih anak berpikir kritis dan kreatif.
+                Melalui pembelajaran yang menyenangkan, saya ingin setiap siswa mencintai matematika
+                dan percaya bahwa mereka mampu menaklukkan setiap soal dengan percaya diri."</em>
+            </p>
+            <cite>— Fanny Fatchurrahman</cite>
+          </blockquote>
+        </div>
+        <div class="about-content reveal-right">
+          <!-- Narasi Asal & Keunikan Daerah -->
+          <div class="profil-narasi">
+            <h3 class="narasi-heading">📍 Asal & Latar Belakang</h3>
+            <p class="about-text">
+              Perkenalkan, nama saya <strong>Fanny Fatchurrahman</strong>. Saya berasal dari <strong>Dusun
+              Blaceran, Karanganom, Klaten, Jawa Tengah</strong>, sebuah wilayah yang terletak di antara lereng
+              Gunung Merapi dan dataran rendah yang subur. Klaten dikenal sebagai daerah <strong>"Seribu Mata
+              Air"</strong> dengan tradisi agraris yang kuat, semangat kebersamaan, serta nilai-nilai
+              kedisiplinan yang diwariskan secara turun-temurun. Latar belakang lingkungan yang menjunjung
+              tinggi etos kerja dan penghargaan terhadap ilmu pengetahuan turut membentuk karakter saya sebagai
+              individu yang sistematis, tekun, dan berorientasi pada pemecahan masalah. Nilai-nilai tersebut
+              menjadi fondasi yang mendorong saya untuk menempuh jalur pendidikan dan mengabdikan diri sebagai
+              tenaga pendidik profesional.
+            </p>
+          </div>
+          <!-- Inspirasi & Tujuan -->
+          <div class="profil-narasi">
+            <h3 class="narasi-heading">💡 Inspirasi Menjadi Guru</h3>
+            <p class="about-text">
+              Inspirasi saya untuk menjadi seorang guru bermula dari pengalaman menjalani <strong>Praktik
+              Pengalaman Lapangan (PPL)</strong> pada masa studi S1 di <strong>Universitas Negeri
+              Yogyakarta</strong>. Melalui kegiatan tersebut, saya berkesempatan untuk terlibat langsung dalam
+              proses pembelajaran di kelas, berinteraksi dengan peserta didik, serta merasakan dinamika yang
+              nyata sebagai pendidik. Pengalaman itu membuka cara pandang saya bahwa profesi guru bukan sekadar
+              menyampaikan materi, melainkan juga membimbing, memotivasi, dan menumbuhkan potensi peserta
+              didik. Sejak saat itu, saya semakin yakin bahwa pendidikan adalah jalan paling bermakna untuk
+              berkontribusi bagi generasi mendatang, dan saya berkomitmen untuk terus mengembangkan diri
+              menjadi pendidik yang profesional dan inspiratif.
+            </p>
+          </div>
+          <!-- Tujuan Profesional -->
+          <div class="profil-narasi">
+            <h3 class="narasi-heading">🎯 Tujuan Profesional</h3>
+            <p class="about-text">
+              Tujuan saya mengikuti program <strong>PPG Prajabatan 2026</strong> adalah untuk meningkatkan
+              kompetensi pedagogik, profesional, sosial, dan kepribadian sebagai calon guru di bidang
+              <strong>Matematika SD</strong>. Melalui program ini, saya ingin memperdalam pemahaman tentang
+              perencanaan pembelajaran matematika yang efektif, pengelolaan kelas yang kondusif, serta penerapan
+              asesmen yang autentik dan bermakna untuk anak usia SD. Saya berkomitmen untuk menjadi guru yang
+              mampu menghadirkan pengalaman belajar matematika yang menyenangkan, relevan dengan kehidupan
+              sehari-hari, serta mampu membentuk karakter peserta didik yang kritis, kreatif, dan percaya diri.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Mini Timeline Perjalanan Hidup (full width) -->
+      <div class="life-timeline reveal">
+        <h3 class="life-timeline-title">🗺️ Perjalanan Hidup</h3>
+        <div class="life-timeline-track">
+          <div class="life-step">
+            <div class="life-step-dot">🐣</div>
+            <div class="life-step-label">Lahir<br><span>2002</span></div>
+          </div>
+          <div class="life-step-line"></div>
+          <div class="life-step">
+            <div class="life-step-dot">📚</div>
+            <div class="life-step-label">SD<br><span>2008–2014</span></div>
+          </div>
+          <div class="life-step-line"></div>
+          <div class="life-step">
+            <div class="life-step-dot">🔢</div>
+            <div class="life-step-label">SMP<br><span>2014–2017</span></div>
+          </div>
+          <div class="life-step-line"></div>
+          <div class="life-step">
+            <div class="life-step-dot">🎓</div>
+            <div class="life-step-label">S1 PGSD<br><span>2021–2025</span></div>
+          </div>
+          <div class="life-step-line"></div>
+          <div class="life-step active">
+            <div class="life-step-dot">⭐</div>
+            <div class="life-step-label">PPG<br><span>Sekarang</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EDUCATION SECTION
+       ============================================ -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge teal"><i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan</div>
+        <h2 class="section-title">Perjalanan Akademik</h2>
+        <p class="section-subtitle">
+          Jejak pendidikan formal yang membentuk kompetensi profesional saya sebagai guru matematika SD
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal ppg-era">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="edu-logo edu-logo-ppg">
+                <img src="assets/img/ust-logo.png" alt="Logo Universitas Sarjanawiyata Tamansiswa" width="60" height="60" />
+              </div>
+              <div class="edu-info">
+                <span class="timeline-year">2025 - Sekarang</span>
+                <span class="badge-ongoing">🔄 Sedang Berlangsung</span>
+              </div>
+            </div>
+            <h3>PPG Prajabatan</h3>
+            <p class="institution">Universitas Sarjanawiyata Tamansiswa</p>
+            <p>Menempuh program PPG Prajabatan dengan tujuan menjadi pendidik profesional yang mampu menghadirkan pembelajaran matematika SD yang bermakna, menyenangkan, dan berpusat pada peserta didik.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal s1-era">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="edu-logo edu-logo-s1">
+                <img src="assets/img/uny-logo.png" alt="Logo Universitas Negeri Yogyakarta" width="60" height="60" />
+              </div>
+              <div class="edu-info">
+                <span class="timeline-year">2021 - 2025</span>
+              </div>
+            </div>
+            <h3>S1 Pendidikan Guru Sekolah Dasar (PGSD)</h3>
+            <p class="institution">Universitas Negeri Yogyakarta — IPK: 3.74/4.00</p>
+            <p>Studi mengkaji pengembangan pembelajaran matematika realistik untuk siswa SD. Aktif sebagai <strong>Panitia Festival Pendidikan UNY 2021</strong> dan terpilih sebagai <strong>Mahasiswa Berprestasi bidang Penalaran</strong>.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal smk-era">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div class="edu-logo edu-logo-smk">
+                <img src="assets/img/smk2klaten-logo.png" alt="Logo SMP Negeri Klaten" width="60" height="60" />
+              </div>
+              <div class="edu-info">
+                <span class="timeline-year">2014 - 2017</span>
+              </div>
+            </div>
+            <h3>SMP Negeri Klaten</h3>
+            <p class="institution">Pendidikan Menengah Pertama</p>
+            <p>Pendidikan menengah yang memberikan fondasi kuat dalam bidang akademik. Pengalaman <strong>OSIS</strong> dan aktif mengikuti kompetisi matematika tingkat kabupaten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTFOLIO SECTION
+       ============================================ -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge amber"><i class="fa-solid fa-folder-open"></i> Portofolio</div>
+        <h2 class="section-title">Karya & Dokumentasi</h2>
+        <p class="section-subtitle">
+          Koleksi perangkat pembelajaran, media, dan dokumentasi kegiatan
+          profesional
+        </p>
+      </div>
+      <div class="portfolio-konten-tabs reveal" role="tablist" aria-label="Pilih jenis konten portofolio">
+        <button class="konten-tab-btn active" data-konten="artefak" role="tab" aria-selected="true">
+          <i class="fa-solid fa-folder-open"></i> Artefak Guru
+        </button>
+        <button class="konten-tab-btn" data-konten="hasil-siswa" role="tab" aria-selected="false">
+          <i class="fa-solid fa-user-graduate"></i> Hasil Karya Siswa
+        </button>
+      </div>
+      <div class="portfolio-tabs reveal">
+        <button class="tab-btn active" data-tab="all">Semua</button>
+        <button class="tab-btn" data-tab="siklus1">Siklus 1</button>
+        <button class="tab-btn" data-tab="siklus2">Siklus 2</button>
+        <button class="tab-btn" data-tab="siklus3">Siklus 3</button>
+      </div>
+      <div class="portfolio-filter reveal">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="rpp">RPP</button>
+        <button class="filter-btn" data-filter="materi">Materi</button>
+        <button class="filter-btn" data-filter="lkm">LKM</button>
+        <button class="filter-btn" data-filter="media">Media</button>
+        <button class="filter-btn" data-filter="asesmen">Asesmen</button>
+        <button class="filter-btn" data-filter="lainnya">Lainnya</button>
+      </div>
+      <div class="portfolio-grid-wrapper" id="portfolioGridWrapper"
+        style="display: grid; grid-template-rows: 1fr; transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+        <div class="portfolio-grid-inner" id="portfolioGridInner"
+          style="min-height: 0; overflow: visible; transition: opacity 0.5s ease, margin-top 0.5s ease; opacity: 1; margin-top: 0;">
+          <div class="portfolio-grid" id="portfolioGrid" style="padding-bottom: 20px;">
+            <!-- Card 1: RPP -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="rpp">
+              <a href="https://drive.google.com/file/d/13HtahKdlZsOCvZQitf-nsfdewEUgTeHT/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat RPP Siklus 1">
+                <img src="https://drive.google.com/thumbnail?id=13HtahKdlZsOCvZQitf-nsfdewEUgTeHT&amp;sz=w1080" alt="RPP Siklus 1 — Gambar Teknik Manufaktur" loading="lazy" width="640" height="400" />
+                <span class="card-tag rpp">RPP</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>RPP Siklus 1</h3>
+                <p>
+                  Modul ajar berbasis Deep Learning untuk kelas XI TPM, materi Assembly Gambar Teknik menggunakan
+                  Autodesk Inventor.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-rpp1">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Asesmen -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="asesmen">
+              <a href="https://drive.google.com/file/d/1SJhusFCTSfJd1659mWUAMIJrQBfO3nmM/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Asesmen Siklus 1">
+                <img src="https://drive.google.com/thumbnail?id=1SJhusFCTSfJd1659mWUAMIJrQBfO3nmM&amp;sz=w1080" alt="Asesmen Terpadu Siklus 1" loading="lazy" width="640" height="400" />
+                <span class="card-tag asesmen">Asesmen</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Perangkat Asesmen Terpadu</h3>
+                <p>
+                  Instrumen asesmen diagnostik, formatif, dan sumatif dengan rubrik penilaian autentik berbasis kinerja
+                  praktik CAD.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-asesmen1">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3: LKM P1 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="lkm">
+              <a href="https://drive.google.com/file/d/1mcGkRJtcLVytwnXn7z2mykJoX9hgZZ9R/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat LKM Siklus 1 P1">
+                <img src="https://drive.google.com/thumbnail?id=1mcGkRJtcLVytwnXn7z2mykJoX9hgZZ9R&amp;sz=w1080" alt="Lembar Kerja Murid P1" loading="lazy" width="640" height="400" />
+                <span class="card-tag modul">LKM P1</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>LKM Pertemuan 1</h3>
+                <p>
+                  Lembar kerja memandu siswa merakit komponen Base dan Tool Holder (Grounded) dengan self-assessment.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-lkm1">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4: LKM P2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="lkm">
+              <a href="https://drive.google.com/file/d/1Z3_glCt5CahLNMVduJ6XUMTLAjnhsl6d/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat LKM Siklus 1 P2">
+                <img src="https://drive.google.com/thumbnail?id=1Z3_glCt5CahLNMVduJ6XUMTLAjnhsl6d&amp;sz=w1080" alt="Lembar Kerja Murid P2" loading="lazy" width="640" height="400" />
+                <span class="card-tag modul">LKM P2</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>LKM Pertemuan 2</h3>
+                <p>
+                  Lembar kerja memandu pemasangan constraint Mate, Flush, dan Insert pada seluruh 8 komponen Tool Post.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-lkm1-p2">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 5: LKM P3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="lkm">
+              <a href="https://drive.google.com/file/d/1YuJtd6sDCAwnYJ2eVZJI71GClZ6ep8et/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat LKM Siklus 1 P3">
+                <img src="https://drive.google.com/thumbnail?id=1YuJtd6sDCAwnYJ2eVZJI71GClZ6ep8et&amp;sz=w1080" alt="Lembar Kerja Murid P3" loading="lazy" width="640" height="400" />
+                <span class="card-tag modul">LKM P3</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>LKM Pertemuan 3</h3>
+                <p>
+                  Lembar kerja perancangan presentasi file 2D (Drawing), penomoran komponen (Ballooning), dan Bill of
+                  Materials (BOM).
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-lkm3">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 6: Bahan Ajar Siklus 1 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="materi">
+              <a href="https://drive.google.com/file/d/17Dta9nZyABe3j9t8P9DnovuKzn75m45l/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Bahan Ajar Siklus 1">
+                <img src="https://drive.google.com/thumbnail?id=17Dta9nZyABe3j9t8P9DnovuKzn75m45l&amp;sz=w1080" alt="Bahan Ajar Siklus 1" loading="lazy" width="640" height="400" />
+                <span class="card-tag sky">Materi</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Bahan Ajar Siklus 1</h3>
+                <p>
+                  Modul bahan ajar lengkap untuk Siklus 1 yang mencakup pengenalan Assembly Tool Post, penerapan Constraint, hingga pembuatan Drawing dan BOM di Autodesk Inventor.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-materi1">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 9: Media PPT -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="media">
+              <a href="https://drive.google.com/file/d/1EUubB5nRb-d2RGyJCrDbUVBlOO3ZwAxq/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Media Pembelajaran Siklus 1">
+                <img src="https://drive.google.com/thumbnail?id=1EUubB5nRb-d2RGyJCrDbUVBlOO3ZwAxq&amp;sz=w1080" alt="Media Pembelajaran — PPT Siklus 1" loading="lazy" width="640" height="400" />
+                <span class="card-tag media">Media</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Media Presentasi (PPT)</h3>
+                <p>
+                  Slide presentasi interaktif Pertemuan 1 yang memvisualisasikan Assembly Tool Post 3D dan konsep
+                  constraint Autodesk Inventor.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-media1">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+                        <!-- Card 9b: Media P2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="media">
+              <a href="https://drive.google.com/file/d/1Ps_bbj5JMdrlZeTidPEPYYfbqokWq390/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Media Pembelajaran Siklus 1 P2">
+                <img src="https://drive.google.com/thumbnail?id=1Ps_bbj5JMdrlZeTidPEPYYfbqokWq390&amp;sz=w1080" alt="Media Pembelajaran — PPT Siklus 1 P2" loading="lazy" width="640" height="400" />
+                <span class="card-tag media">Media P2</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Media Presentasi (PPT) P2</h3>
+                <p>
+                  Slide presentasi interaktif Pertemuan 2 yang memvisualisasikan Assembly Tool Post 3D dan konsep
+                  constraint Autodesk Inventor.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-media2">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 9c: Media P3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="media">
+              <a href="https://drive.google.com/file/d/1J66nK1Tj4dIgvm9A9u0brBtIuvxo_gRz/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Media Pembelajaran Siklus 1 P3">
+                <img src="https://drive.google.com/thumbnail?id=1J66nK1Tj4dIgvm9A9u0brBtIuvxo_gRz&amp;sz=w1080" alt="Media Pembelajaran — PPT Siklus 1 P3" loading="lazy" width="640" height="400" />
+                <span class="card-tag media">Media P3</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Media Presentasi (PPT) P3</h3>
+                <p>
+                  Slide presentasi interaktif Pertemuan 3 yang memvisualisasikan Assembly Tool Post 3D dan konsep
+                  constraint Autodesk Inventor.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-media3">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div><!-- Card 10: Tool Post Rev -->
+            <div class="portfolio-card reveal" data-siklus="siklus1" data-category="lainnya">
+              <a href="https://drive.google.com/file/d/1HGyN7VOBQYgdXj3-IszSVntb4yltAMt_/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Job Sheet Tool Post">
+                <img src="https://drive.google.com/thumbnail?id=1HGyN7VOBQYgdXj3-IszSVntb4yltAMt_&amp;sz=w1080" alt="Job Sheet Tool Post" loading="lazy" width="640" height="400" />
+                <span class="card-tag coral">Job Sheet</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Job Sheet Tool Post</h3>
+                <p>
+                  File PDF gambar rakitan Tool Post hasil revisi, digunakan sebagai referensi objek praktik Assembly di
+                  Siklus 1.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-toolpost">
+                  Lihat Analisis <i class="fa-solid fa-chart-simple"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- === SIKLUS 2 CARDS === -->
+            <!-- Card S2-1: RPP Siklus 2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="rpp">
+              <a href="https://drive.google.com/file/d/1ZA9QdvQr6je_JHCprcPOy62WWKSISAaF/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat RPP Siklus 2">
+                <img src="https://drive.google.com/thumbnail?id=1ZA9QdvQr6je_JHCprcPOy62WWKSISAaF&amp;sz=w1080" alt="RPP Siklus 2" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag rpp">RPP</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>RPP Siklus 2</h3>
+                <p>
+                  Modul ajar siklus ke-2 yang dikembangkan berdasarkan hasil refleksi dan umpan balik dari Siklus 1.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-rpp2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S2-2: Asesmen Siklus 2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="asesmen">
+              <a href="https://drive.google.com/file/d/1JfYVk4iEimTrBkIMsdm8se5tzNjzwpzz/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Asesmen Siklus 2">
+                <img src="https://drive.google.com/thumbnail?id=1JfYVk4iEimTrBkIMsdm8se5tzNjzwpzz&amp;sz=w1080" alt="Asesmen Siklus 2" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag asesmen">Asesmen</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Perangkat Asesmen Siklus 2</h3>
+                <p>
+                  Instrumen asesmen siklus ke-2 yang disempurnakan untuk mengukur ketercapaian kompetensi lanjutan.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-asesmen2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S2-3: Bahan Ajar Siklus 2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="materi">
+              <a href="https://drive.google.com/file/d/1iERRUFToo_4ckzTqBm1CKgQ7eixDdtsF/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Bahan Ajar Siklus 2">
+                <img src="https://drive.google.com/thumbnail?id=1iERRUFToo_4ckzTqBm1CKgQ7eixDdtsF&amp;sz=w1080" alt="Bahan Ajar Siklus 2" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag sky">Materi</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Bahan Ajar Siklus 2</h3>
+                <p>
+                  Modul bahan ajar Siklus 2 untuk memperkaya penguatan konsep dan praktik pembelajaran.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-materi2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S2-4: LKM Siklus 2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="lkm">
+              <a href="https://drive.google.com/file/d/1u8pM1xoKZZcD-_1AL0LoqnMQY0W-JC1d/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat LKM Siklus 2">
+                <img src="https://drive.google.com/thumbnail?id=1u8pM1xoKZZcD-_1AL0LoqnMQY0W-JC1d&amp;sz=w1080" alt="LKM Siklus 2" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag modul">LKM</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>LKM Siklus 2</h3>
+                <p>
+                  Lembar kerja murid Siklus 2 untuk memandu aktivitas pembelajaran lanjutan secara terstruktur.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-lkm2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S2-5: Media Siklus 2 -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="media">
+              <a href="https://drive.google.com/file/d/1Vp0AWdM7qEqq1TC_zvRLVwuGaeqSxNyo/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Media Siklus 2">
+                <img src="https://drive.google.com/thumbnail?id=1Vp0AWdM7qEqq1TC_zvRLVwuGaeqSxNyo&amp;sz=w1080" alt="Media Siklus 2" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag media">Media</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Media Presentasi (PPT) Siklus 2</h3>
+                <p>
+                  Media presentasi inovatif untuk siklus ke-2 dengan pendekatan yang diperkaya dari evaluasi Siklus 1.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-media-s2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S2-6: Job Sheet Bench Vise -->
+            <div class="portfolio-card reveal" data-siklus="siklus2" data-category="lainnya">
+              <a href="https://drive.google.com/file/d/1UBkwO2ZI1SxuAzPomElc8yiNGclT3lv_/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Job Sheet Bench Vise">
+                <img src="https://drive.google.com/thumbnail?id=1UBkwO2ZI1SxuAzPomElc8yiNGclT3lv_&amp;sz=w1080" alt="Job Sheet Bench Vise" loading="lazy" width="640" height="400" class="img-siklus2" />
+                <span class="card-tag coral">Job Sheet</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Job Sheet Bench Vise</h3>
+                <p>
+                  File jobsheet Bench Vise sebagai referensi praktik dan pengerjaan tugas pada Siklus 2.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-bench-vise2">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- === SIKLUS 3 CARDS === -->
+            <!-- Card S3-1: RPP Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="rpp">
+              <a href="https://drive.google.com/file/d/1nMEvFmnToRrXgEasfwipyZYPFPAH81g7/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat RPP Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=1nMEvFmnToRrXgEasfwipyZYPFPAH81g7&amp;sz=w1080" alt="RPP Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag rpp">RPP</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>RPP Siklus 3</h3>
+                <p>
+                  Modul ajar siklus ke-3 sebagai puncak penerapan hasil pembelajaran dan penyempurnaan kompetensi mengajar.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-rpp3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S3-2: Asesmen Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="asesmen">
+              <a href="https://drive.google.com/file/d/1Q4X0hzFoL2sndthweM0Z2Zg2UMEZbAnN/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Asesmen Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=1Q4X0hzFoL2sndthweM0Z2Zg2UMEZbAnN&amp;sz=w1080" alt="Asesmen Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag asesmen">Asesmen</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Perangkat Asesmen Siklus 3</h3>
+                <p>
+                  Instrumen asesmen final yang komprehensif untuk mengukur ketuntasan kompetensi siswa di akhir program.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-asesmen3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S3-3: Bahan Ajar Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="materi">
+              <a href="https://drive.google.com/file/d/1IMeGEQnQ7yGPfZDlNIx9vvFvSyEFDxd5/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Bahan Ajar Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=1IMeGEQnQ7yGPfZDlNIx9vvFvSyEFDxd5&amp;sz=w1080" alt="Bahan Ajar Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag sky">Materi</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Bahan Ajar Siklus 3</h3>
+                <p>
+                  Modul bahan ajar Siklus 3 sebagai penguatan akhir konsep dan praktik pembelajaran setelah refleksi siklus sebelumnya.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-materi3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S3-4: LKM Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="lkm">
+              <a href="https://drive.google.com/file/d/146s-ujXpnJcaow8u1ez-d7AybWFvk6ot/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat LKM Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=146s-ujXpnJcaow8u1ez-d7AybWFvk6ot&amp;sz=w1080" alt="LKM Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag modul">LKM</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>LKM Siklus 3</h3>
+                <p>
+                  Lembar kerja murid Siklus 3 untuk memandu aktivitas pembelajaran puncak secara terstruktur.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-lkm-s3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S3-5: Media Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="media">
+              <a href="https://drive.google.com/file/d/1WC8kfZjPYYoN2XoQecVcyjJbmqGckReo/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Media Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=1WC8kfZjPYYoN2XoQecVcyjJbmqGckReo&amp;sz=w1080" alt="Media Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag media">Media</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Media Presentasi (PPT) Siklus 3</h3>
+                <p>
+                  Media presentasi puncak untuk siklus ke-3 yang menyempurnakan pendekatan dari Siklus 1 dan 2.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-media-s3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+
+            <!-- Card S3-6: Job Sheet Siklus 3 -->
+            <div class="portfolio-card reveal" data-siklus="siklus3" data-category="lainnya">
+              <a href="https://drive.google.com/file/d/1-hlj7zVWoxI7PuqmPQr5hTXQEKzxZbQ7/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="portfolio-card-img" aria-label="Lihat Job Sheet Siklus 3">
+                <img src="https://drive.google.com/thumbnail?id=1-hlj7zVWoxI7PuqmPQr5hTXQEKzxZbQ7&amp;sz=w1080" alt="Job Sheet Siklus 3" loading="lazy" width="640" height="400" class="img-siklus3" />
+                <span class="card-tag coral">Job Sheet</span>
+                <div class="card-img-overlay"><span><i class="fa-solid fa-file-pdf"></i> Buka PDF di Drive</span></div>
+              </a>
+              <div class="portfolio-card-body">
+                <h3>Job Sheet Siklus 3</h3>
+                <p>
+                  File jobsheet Siklus 3 sebagai referensi praktik dan pengerjaan tugas akhir program.
+                </p>
+                <button class="card-link btn-modal" data-modal="modal-jobsheet3">Lihat Analisis <i class="fa-solid fa-chart-simple"></i></button>
+              </div>
+            </div>
+          </div> <!-- End portfolioGrid -->
+        </div> <!-- End portfolioGridInner -->
+      </div> <!-- End portfolioGridWrapper -->
+
+      <!-- ============ HASIL KARYA SISWA ============ -->
+      <div class="hasil-siswa-wrapper" id="hasilSiswaWrapper" hidden>
+        <div class="hasil-siswa-intro reveal">
+          <p>Cuplikan karya siswa kelas XI Teknik Pemesinan SMK Negeri 2 Klaten sebagai bukti hasil pembelajaran. Identitas siswa ditampilkan menggunakan inisial untuk menjaga privasi.</p>
+        </div>
+
+        <div class="hasil-siswa-grid">
+          <article class="hasil-card hasil-card-clickable reveal dossier-preview-trigger" data-hasil-siklus="siklus1"
+            data-pdf-title="Hasil Karya Siswa Siklus 1 - Tool Post Assembly"
+            data-pdf-url="https://drive.google.com/file/d/1ax_Io2t8GX_jAfQ-vOKt5RysM9MnKH72/view?usp=sharing"
+            data-pdf-preview="https://drive.google.com/file/d/1ax_Io2t8GX_jAfQ-vOKt5RysM9MnKH72/preview"
+            tabindex="0" role="button" aria-label="Buka hasil karya siswa Siklus 1">
+            <div class="hasil-card-thumb">
+              <img src="https://drive.google.com/thumbnail?id=1ax_Io2t8GX_jAfQ-vOKt5RysM9MnKH72&amp;sz=w1080" alt="Preview hasil karya Tool Post Assembly Siklus 1" loading="lazy" />
+            </div>
+            <div class="hasil-card-body">
+              <span class="hasil-card-tag">Siklus 1 · Drawing IDW</span>
+              <h3>Hasil Karya Tool Post Assembly</h3>
+              <p>Contoh drawing rakitan Tool Post yang dikerjakan siswa kelas XI Teknik Pemesinan setelah menyelesaikan rangkaian RPP, LKM, dan praktik di laboratorium CAD.</p>
+              <span class="hasil-card-cta"><i class="fa-solid fa-magnifying-glass-plus"></i> Lihat Karya</span>
+            </div>
+          </article>
+
+          <article class="hasil-card hasil-card-clickable reveal dossier-preview-trigger" data-hasil-siklus="siklus2"
+            data-pdf-title="Hasil Karya Siswa Siklus 2 - Bench Vise Assembly"
+            data-pdf-url="https://drive.google.com/file/d/10_upqkA1cMUz1mdoCmBgjigyVyZLdeZb/view?usp=sharing"
+            data-pdf-preview="https://drive.google.com/file/d/10_upqkA1cMUz1mdoCmBgjigyVyZLdeZb/preview"
+            tabindex="0" role="button" aria-label="Buka hasil karya siswa Siklus 2">
+            <div class="hasil-card-thumb">
+              <img src="https://drive.google.com/thumbnail?id=10_upqkA1cMUz1mdoCmBgjigyVyZLdeZb&amp;sz=w1080" alt="Preview hasil karya Bench Vise Assembly Siklus 2" loading="lazy" />
+            </div>
+            <div class="hasil-card-body">
+              <span class="hasil-card-tag">Siklus 2 · Bench Vise</span>
+              <h3>Hasil Karya Bench Vise Assembly</h3>
+              <p>Contoh hasil rakitan Bench Vise yang menunjukkan penguasaan constraint, toleransi suaian, dan pembacaan jobsheet pada Siklus 2.</p>
+              <span class="hasil-card-cta"><i class="fa-solid fa-magnifying-glass-plus"></i> Lihat Karya</span>
+            </div>
+          </article>
+
+          <article class="hasil-card reveal" data-hasil-siklus="siklus3">
+            <div class="hasil-card-thumb" aria-hidden="true">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="hasil-card-body">
+              <span class="hasil-card-tag">Siklus 3 · Tugas Akhir</span>
+              <h3>Hasil Karya Tugas Akhir</h3>
+              <p>Contoh karya akhir program penguatan yang mengintegrasikan konsep dari Siklus 1 dan 2 sebagai bukti konsolidasi pembelajaran siswa.</p>
+              <span class="hasil-card-soon">Segera dilampirkan</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div> <!-- End container -->
+  </section>
+
+  <!-- ============================================
+       ANALISIS ARTEFAK SECTION
+       ============================================ -->
+  <section class="analisis section" id="analisis">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge teal"><i class="fa-solid fa-magnifying-glass-chart"></i> Analisis Artefak</div>
+        <h2 class="section-title">Analisis Artefak Produk Rencana &amp; Perangkat Pembelajaran</h2>
+        <p class="section-subtitle">
+          Refleksi terhadap produk pembelajaran yang telah disusun, mencakup kendala, dasar pedagogis, faktor keberhasilan, serta kemungkinan adaptasi pada situasi kelas yang berbeda.
+        </p>
+      </div>
+
+      <div class="analisis-grid">
+        <article class="analisis-card reveal" data-accent="rose">
+          <div class="analisis-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+          <span class="analisis-tag">Aspek 1</span>
+          <h3>Kendala Penyusunan</h3>
+          <p>
+            Saat menyusun perangkat pembelajaran dari Siklus 1 sampai 3, kendala paling terasa justru bukan pada teori, melainkan pada pengaturan waktu. Saya butuh ruang untuk menyelaraskan capaian pembelajaran dengan kebutuhan dunia kerja, sementara jam pelajaran di sekolah cukup ketat. Perbedaan kemampuan awal siswa dalam membaca gambar teknik juga membuat saya perlu menyiapkan dua jalur instruksi sekaligus, satu untuk siswa yang sudah cepat menangkap dan satu untuk siswa yang masih mengejar dasar. Di sisi lain, fasilitas praktik seperti lisensi Inventor dan media simulasi assembly tidak selalu siap pakai, jadi saya sering harus menyesuaikan rencana di hari H.
+          </p>
+        </article>
+
+        <article class="analisis-card reveal" data-accent="lavender">
+          <div class="analisis-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <span class="analisis-tag">Aspek 2</span>
+          <h3>Teori dan Konsep Pedagogi</h3>
+          <p>
+            Saya bertumpu pada beberapa pijakan teori yang saling melengkapi. Pendekatan <strong>Deep Learning</strong> menjadi rangka utama agar siswa tidak hanya menghafal langkah, tetapi memahami alasan di balik setiap perintah CAD. Saya menggabungkannya dengan <strong>Project-Based Learning</strong> supaya kompetensi praktik benar-benar lahir dari produk nyata, bukan sekadar latihan tertutup. Untuk menampung perbedaan kecepatan belajar, saya memakai <strong>Differentiated Instruction</strong>, sementara konsep <strong>scaffolding</strong> Vygotsky saya pakai untuk menjembatani konsep dasar gambar teknik menuju aplikasi pemesinan yang lebih kompleks. Filosofi Among Ki Hadjar Dewantara juga menjaga peran saya tetap sebagai pendamping, bukan pengontrol.
+          </p>
+        </article>
+
+        <article class="analisis-card reveal" data-accent="mint">
+          <div class="analisis-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <span class="analisis-tag">Aspek 3</span>
+          <h3>Faktor Keberhasilan</h3>
+          <p>
+            Perangkat saya bisa berjalan karena beberapa hal yang saling menopang. Modul ajar yang kontekstual dengan dunia kerja membuat siswa merasa materi ini relevan untuk masa depan mereka, jobsheet yang jelas memudahkan mereka mengeksekusi tugas tanpa banyak menebak, dan kolaborasi dengan Guru Pamong serta Dosen Pembimbing memberi saya umpan balik cepat saat ada yang perlu diperbaiki. Antusiasme siswa juga meningkat karena tugas dikaitkan langsung dengan praktik industri. Yang tidak kalah penting, asesmen formatif berkala membuat saya bisa mengoreksi arah lebih awal, sebelum kesalahan menumpuk di produk akhir.
+          </p>
+        </article>
+
+        <article class="analisis-card reveal" data-accent="amber">
+          <div class="analisis-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <span class="analisis-tag">Aspek 4</span>
+          <h3>Adaptasi untuk Kelas Berbeda</h3>
+          <p>
+            Perangkat ini dirancang agar mudah saya adaptasi ke kondisi kelas lain. Tingkat kompleksitas gambar teknik bisa diturunkan untuk kelas yang kemampuan awalnya beragam, dan objek praktik seperti Tool Post atau Bench Vise bisa diganti sesuai sarana yang tersedia di sekolah masing-masing. Durasi serta urutan kegiatan juga bisa saya geser kalau jam pelajaran berbeda dari yang saya pakai di Siklus 1 sampai 3. Bila sekolah punya keterbatasan sarana praktik, strategi asesmen bisa saya alihkan ke berbasis portofolio agar siswa tetap punya bukti kompetensi yang valid tanpa harus bergantung pada satu jenis perangkat lunak tertentu.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MODAL ANALISIS ARTEFAK (Template)
+       ============================================ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-container" id="modalContainer">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Content injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       PENILAIAN SECTION
+       ============================================ -->
+  <section class="penilaian section" id="penilaian">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge mint"><i class="fa-solid fa-clipboard-check"></i> Penilaian DPL & GP</div>
+        <h2 class="section-title">Hasil Penilaian Praktik</h2>
+        <p class="section-subtitle">Lampiran 7 dan 8: Penilaian penyusunan perangkat dan praktik mengajar</p>
+      </div>
+      <div class="assessment-dossier-grid reveal">
+        <article class="assessment-dossier-card dossier-blue">
+          <div class="dossier-watermark">07</div>
+          <div class="dossier-content">
+            <span class="dossier-kicker"><i class="fa-solid fa-file-signature"></i> Lampiran 7</span>
+            <h3>Penilaian Penyusunan Perangkat Pembelajaran</h3>
+            <p>Dokumen penilaian resmi yang memuat evaluasi penyusunan perangkat pembelajaran sebagai bukti capaian perencanaan pembelajaran.</p>
+            <div class="dossier-meta">
+              <span><strong>Format</strong> PDF Resmi</span>
+              <span><strong>Penilai</strong> Guru Pamong / Dosen</span>
+              <span><strong>Status</strong> Terlampir</span>
+            </div>
+            <div class="dossier-actions">
+              <button class="dossier-btn dossier-preview-trigger" type="button" data-pdf-title="Lampiran 7 - Penilaian Penyusunan Perangkat Pembelajaran" data-pdf-url="https://drive.google.com/file/d/1LBOchElve79VTWNeWrD7rUAVUqSms5Fj/view?usp=sharing" data-pdf-preview="https://drive.google.com/file/d/1LBOchElve79VTWNeWrD7rUAVUqSms5Fj/preview">Preview PDF</button>
+              <a class="dossier-link" href="https://drive.google.com/file/d/1LBOchElve79VTWNeWrD7rUAVUqSms5Fj/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Drive</a>
+            </div>
+          </div>
+          <button class="dossier-preview dossier-preview-trigger" type="button" data-pdf-title="Lampiran 7 - Penilaian Penyusunan Perangkat Pembelajaran" data-pdf-url="https://drive.google.com/file/d/1LBOchElve79VTWNeWrD7rUAVUqSms5Fj/view?usp=sharing" data-pdf-preview="https://drive.google.com/file/d/1LBOchElve79VTWNeWrD7rUAVUqSms5Fj/preview" aria-label="Preview Lampiran 7">
+            <img src="https://drive.google.com/thumbnail?id=1LBOchElve79VTWNeWrD7rUAVUqSms5Fj&amp;sz=w1080" alt="Thumbnail Lampiran 7" loading="lazy" />
+            <span><i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk preview</span>
+          </button>
+        </article>
+
+        <article class="assessment-dossier-card dossier-amber">
+          <div class="dossier-watermark">08</div>
+          <div class="dossier-content">
+            <span class="dossier-kicker"><i class="fa-solid fa-chalkboard-user"></i> Lampiran 8</span>
+            <h3>Penilaian Praktik Mengajar Mahasiswa</h3>
+            <p>Dokumen penilaian resmi yang merekam evaluasi praktik mengajar, pelaksanaan pembelajaran, refleksi, dan profesionalitas mahasiswa PPG.</p>
+            <div class="dossier-meta">
+              <span><strong>Format</strong> PDF Resmi</span>
+              <span><strong>Penilai</strong> Guru Pamong / Dosen</span>
+              <span><strong>Status</strong> Terlampir</span>
+            </div>
+            <div class="dossier-actions">
+              <button class="dossier-btn dossier-preview-trigger" type="button" data-pdf-title="Lampiran 8 - Penilaian Praktik Mengajar Mahasiswa" data-pdf-url="https://drive.google.com/file/d/1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa/view?usp=sharing" data-pdf-preview="https://drive.google.com/file/d/1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa/preview">Preview PDF</button>
+              <a class="dossier-link" href="https://drive.google.com/file/d/1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa/view?usp=sharing" target="_blank" rel="noopener noreferrer">Buka Drive</a>
+            </div>
+          </div>
+          <button class="dossier-preview dossier-preview-trigger" type="button" data-pdf-title="Lampiran 8 - Penilaian Praktik Mengajar Mahasiswa" data-pdf-url="https://drive.google.com/file/d/1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa/view?usp=sharing" data-pdf-preview="https://drive.google.com/file/d/1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa/preview" aria-label="Preview Lampiran 8">
+            <img src="https://drive.google.com/thumbnail?id=1DzpU_XXM0YuwTa3dKtnNtNaYsUl5UpQa&amp;sz=w1080" alt="Thumbnail Lampiran 8" loading="lazy" />
+            <span><i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk preview</span>
+          </button>
+        </article>
+      </div>
+
+      <div class="assessment-highlights reveal">
+        <span><i class="fa-solid fa-list-check"></i> Perencanaan</span>
+        <span><i class="fa-solid fa-person-chalkboard"></i> Pelaksanaan</span>
+        <span><i class="fa-solid fa-rotate"></i> Refleksi</span>
+        <span><i class="fa-solid fa-award"></i> Profesionalitas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PHILOSOPHY SECTION
+       ============================================ -->
+  <section class="philosophy section" id="model-guru">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge lavender"><i class="fa-solid fa-star"></i> Model Guru yang Dituju</div>
+        <h2 class="section-title">Guru Profesional Impian Saya</h2>
+        <p class="section-subtitle">
+          Misi, kompetensi, dan karakter guru yang ingin saya bangun
+        </p>
+      </div>
+      <div class="philosophy-card reveal">
+        <div class="quote-icon">"</div>
+        <blockquote>
+          "Menjadi guru matematika SD yang profesional berarti terus belajar, berinovasi, dan menginspirasi. Saya berkomitmen untuk hadir
+          sebagai fasilitator pembelajaran yang membuat matematika menyenangkan dan bermakna bagi setiap siswa, serta mampu membimbing peserta
+          didik menjadi pribadi yang kritis dalam berpikir, kreatif dalam menyelesaikan masalah, serta percaya diri dalam menghadapi tantangan matematika."
+        </blockquote>
+        <p class="philosophy-author">Misi Guru Fanny Fatchurrahman</p>
+      </div>
+      <div class="philosophy-pillars">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">📚</div>
+          <h4>Kompetensi Pedagogik</h4>
+          <p>Merancang pengalaman belajar matematika yang berpusat pada peserta didik melalui pendekatan pembelajaran matematika realistik,
+            diferensiasi, dan asesmen autentik yang sesuai dengan tahap perkembangan anak usia SD.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">🔢</div>
+          <h4>Kompetensi Profesional</h4>
+          <p>Menguasai dan terus memperbarui kompetensi dalam bidang matematika SD, mulai dari aritmatika dasar,
+            geometri, pengukuran, hingga statistika sederhana sesuai kurikulum yang berlaku.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">🤝</div>
+          <h4>Kompetensi Sosial</h4>
+          <p>Membangun komunikasi dan kolaborasi yang sehat dengan peserta didik, rekan guru, orang tua, serta komunitas
+            pendidikan sebagai mitra pembelajaran untuk menciptakan ekosistem belajar yang saling mendukung.</p>
+        </div>
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">💎</div>
+          <h4>Kompetensi Kepribadian</h4>
+          <p>Menjadi teladan integritas, kedisiplinan, dan semangat belajar sepanjang hayat bagi peserta didik,
+            menunjukkan bahwa seorang guru sejati adalah seorang pelajar yang tidak pernah berhenti bertumbuh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SKILLS SECTION
+       ============================================ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge sky"><i class="fa-solid fa-wrench"></i> Keahlian</div>
+        <h2 class="section-title">Kompetensi & Keahlian</h2>
+        <p class="section-subtitle">Berbagai keterampilan yang mendukung profesionalisme di bidang pendidikan</p>
+      </div>
+      <div class="skills-tabs reveal">
+        <button class="skills-tab-btn active" data-skills-tab="pedagogik">📚 Pedagogik</button>
+        <button class="skills-tab-btn" data-skills-tab="teknik">🔢 Matematika</button>
+        <button class="skills-tab-btn" data-skills-tab="teknologi">💻 Teknologi</button>
+        <button class="skills-tab-btn" data-skills-tab="komunikasi">🗣️ Komunikasi</button>
+      </div>
+      <div class="skills-panel active" id="skills-pedagogik">
+        <div class="skill-cards-grid">
+          <div class="skill-item-card reveal" style="--stagger: 0">
+            <div class="skill-item-icon">🎯</div>
+            <div class="skill-item-name">Perencanaan Pembelajaran Matematika</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 1">
+            <div class="skill-item-icon">📊</div>
+            <div class="skill-item-name">Asesmen Diagnostik & Formatif</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 2">
+            <div class="skill-item-icon">🚀</div>
+            <div class="skill-item-name">Pembelajaran Matematika Realistik</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 3">
+            <div class="skill-item-icon">🔍</div>
+            <div class="skill-item-name">Diferensiasi & Scaffolding</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-panel" id="skills-teknik">
+        <div class="skill-cards-grid">
+          <div class="skill-item-card reveal" style="--stagger: 0">
+            <div class="skill-item-icon">➕</div>
+            <div class="skill-item-name">Aritmatika & Operasi Bilangan</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 1">
+            <div class="skill-item-icon">📐</div>
+            <div class="skill-item-name">Geometri & Pengukuran</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 2">
+            <div class="skill-item-icon">📈</div>
+            <div class="skill-item-name">Statistika & Peluang SD</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 3">
+            <div class="skill-item-icon">🧩</div>
+            <div class="skill-item-name">Pemecahan Masalah Matematika</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-panel" id="skills-teknologi">
+        <div class="skill-cards-grid">
+          <div class="skill-item-card reveal" style="--stagger: 0">
+            <div class="skill-item-icon">🎮</div>
+            <div class="skill-item-name">Media Pembelajaran Interaktif</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 1">
+            <div class="skill-item-icon">🎬</div>
+            <div class="skill-item-name">Produksi Konten Digital</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 2">
+            <div class="skill-item-icon">📱</div>
+            <div class="skill-item-name">Aplikasi Learning Management</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 3">
+            <div class="skill-item-icon">💻</div>
+            <div class="skill-item-name">Literasi Digital & Coding</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-panel" id="skills-komunikasi">
+        <div class="skill-cards-grid">
+          <div class="skill-item-card reveal" style="--stagger: 0">
+            <div class="skill-item-icon">🎙️</div>
+            <div class="skill-item-name">Public Speaking & Podcasting</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 1">
+            <div class="skill-item-icon">✍️</div>
+            <div class="skill-item-name">Storytelling & Content Writing</div>
+            <div class="skill-item-badge menengah">Menengah</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 2">
+            <div class="skill-item-icon">🤝</div>
+            <div class="skill-item-name">Kolaborasi Tim</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+          <div class="skill-item-card reveal" style="--stagger: 3">
+            <div class="skill-item-icon">🌐</div>
+            <div class="skill-item-name">Bahasa Inggris (Profesional)</div>
+            <div class="skill-item-badge mahir">Mahir</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CERTIFICATES SECTION
+       ============================================ -->
+  <section class="certificates section" id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge mint"><i class="fa-solid fa-certificate"></i> Sertifikat</div>
+        <h2 class="section-title">Sertifikat & Pencapaian</h2>
+        <p class="section-subtitle">
+          Bukti pengembangan diri dan pencapaian profesional
+        </p>
+      </div>
+      <div class="cert-grid">
+        <!-- 2026 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">🤝</div>
+          <div class="cert-card-content">
+            <h4>Diklat Anti Bullying</h4>
+            <p class="cert-issuer">Lembaga Diklat</p>
+            <p class="cert-year">2026</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/18WlgJpPPnidj7Y7_Mapy3mXqOHbKyRF0/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🌍</div>
+          <div class="cert-card-content">
+            <h4>Diklat Wawasan Kebhinekaan Global</h4>
+            <p class="cert-issuer">Lembaga Diklat</p>
+            <p class="cert-year">2026</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1bAAnR7T5nft7vBNgZOkc1cAFC4Taho2t/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2025 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">🖥️</div>
+          <div class="cert-card-content">
+            <h4>BNSP CAD 3D</h4>
+            <p class="cert-issuer">BNSP</p>
+            <p class="cert-year">2025</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1-gSjFyn7UPJE0Mw_tqlJm0zf10uU7fLv/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🎖️</div>
+          <div class="cert-card-content">
+            <h4>BNSP Predictive Maintenance</h4>
+            <p class="cert-issuer">BNSP</p>
+            <p class="cert-year">2025</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1YV9LuQVT4j7jcOAt1ZzZbz7avsxovA9B/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">✈️</div>
+          <div class="cert-card-content">
+            <h4>Magang PKL S1 - Angkasa Pura</h4>
+            <p class="cert-issuer">PT Angkasa Pura</p>
+            <p class="cert-year">2025</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1-ZONAIB7bHb0g1Yj6tB7ElyyfWi2ZEfz/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-card-content">
+            <h4>Sertifikat Pelatihan</h4>
+            <p class="cert-issuer">Lembaga Pelatihan</p>
+            <p class="cert-year">2025</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1Cy9qOWto5xWzNoXNm8N2KnP2OmzSiwvk/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2024 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">📝</div>
+          <div class="cert-card-content">
+            <h4>HKI Modul Gambar Teknik Manufaktur</h4>
+            <p class="cert-issuer">Kemenkumham RI</p>
+            <p class="cert-year">2024</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1u5tnxiS3YlidD5SRdEskeZsulnXpOEQp/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2023 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">⭐</div>
+          <div class="cert-card-content">
+            <h4>Piagam Mahasiswa Berprestasi</h4>
+            <p class="cert-issuer">Universitas Negeri Yogyakarta</p>
+            <p class="cert-year">2023</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/12hXwhDeVZQa8eH-ifFZ4-Ld7LBRtYhKe/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2022 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏎️</div>
+          <div class="cert-card-content">
+            <h4>Shell Eco Marathon 2022</h4>
+            <p class="cert-issuer">Shell Indonesia</p>
+            <p class="cert-year">2022</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1lLuDY_9cxT-3XINufT8CPou60s60z-3L/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2021 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏭</div>
+          <div class="cert-card-content">
+            <h4>Magang PKL SMK - YPTI</h4>
+            <p class="cert-issuer">YPTI Yogyakarta</p>
+            <p class="cert-year">2021</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1-Yn3ynsYlcVJmUy-KMoiw_gy97RHfSoB/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2020 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">📏</div>
+          <div class="cert-card-content">
+            <h4>LKS SMK Bidang Metrologi</h4>
+            <p class="cert-issuer">Dinas Pendidikan Provinsi</p>
+            <p class="cert-year">2020</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1-OnR7mhP7wuSeTiEIhJBof39qZf9mx17/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+        <!-- 2019 -->
+        <div class="cert-card reveal">
+          <div class="cert-icon">📐</div>
+          <div class="cert-card-content">
+            <h4>Mechanical Fair UGM - CADD</h4>
+            <p class="cert-issuer">Universitas Gadjah Mada</p>
+            <p class="cert-year">2019</p>
+            <button class="cert-btn" data-cert-url="https://drive.google.com/file/d/1-DKHtY7yoO89XY018aYDy1htdEDY9A-z/preview">Lihat Sertifikat →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sertifikat Preview Modal -->
+  <div class="cert-modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" style="display:none; position:fixed; inset:0; align-items:center; justify-content:center; background:rgba(0,0,0,0.85); z-index:10000; padding:24px;">
+    <div class="cert-modal-box" style="background:#fff; border-radius:16px; width:min(90%, 900px); height:min(85vh, 820px); display:flex; flex-direction:column; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.4); position:relative; margin:auto;">
+      <div class="cert-modal-header" style="display:flex; justify-content:space-between; align-items:center; padding:16px 20px; border-bottom:1px solid #eee;">
+        <h4 id="certModalTitle" style="margin:0; font-size:1.1rem; color:#0F5EA8;">Preview Sertifikat</h4>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a id="certModalOpen" href="#" target="_blank" rel="noopener noreferrer" style="padding:8px 16px; background:#2EC4B6; color:#fff; border-radius:8px; font-size:0.8rem; font-weight:600; text-decoration:none;">Buka di Tab Baru ↗</a>
+          <button id="certModalClose" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#666; line-height:1;">×</button>
+        </div>
+      </div>
+      <div class="cert-modal-body" style="flex:1; padding:0;">
+        <iframe id="certModalIframe" style="width:100%; height:100%; border:none;" title="Preview Sertifikat"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       GALLERY SECTION
+       ============================================ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge teal"><i class="fa-solid fa-images"></i> Galeri</div>
+        <h2 class="section-title">Dokumentasi Kegiatan</h2>
+        <p class="section-subtitle">
+          Kumpulan momen bermakna selama proses belajar mengajar
+        </p>
+      </div>
+
+      <div class="gallery-video-hero reveal" data-type="video"
+           data-src="https://www.youtube.com/embed/6DE4NWirzZo"
+           role="button" tabindex="0" aria-label="Putar video pembelajaran">
+        <div class="gallery-video-thumb" aria-hidden="true">
+          <img src="assets/img/dokumentasi/dok-suasana-lab.webp" alt="" loading="lazy" />
+        </div>
+        <div class="gallery-video-overlay" aria-hidden="true"></div>
+        <div class="gallery-video-content">
+          <span class="gallery-video-play" aria-hidden="true">
+            <i class="fa-solid fa-play"></i>
+          </span>
+          <div class="gallery-video-text">
+            <span class="gallery-video-tag">Video Pembelajaran</span>
+            <h3>Demonstrasi Praktik Mengajar</h3>
+            <p>Cuplikan kegiatan mengajar di kelas Teknik Pemesinan SMK Negeri 2 Klaten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-accordion reveal">
+        <div class="gallery-item active" data-type="image" data-src="assets/img/dokumentasi/dok-suasana-lab.webp">
+          <img src="assets/img/dokumentasi/dok-suasana-lab.webp" alt="Suasana Lab CAD" loading="lazy" width="1400" height="933">
+          <div class="gallery-caption">
+            <h3>Suasana Lab CAD</h3>
+            <p>Pendampingan kelas Teknik Pemesinan saat praktik Autodesk Inventor</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-type="image" data-src="assets/img/dokumentasi/dok-praktik-cad-1.webp">
+          <img src="assets/img/dokumentasi/dok-praktik-cad-1.webp" alt="Praktik Mandiri Inventor" loading="lazy" width="1400" height="933">
+          <div class="gallery-caption">
+            <h3>Praktik Mandiri Inventor</h3>
+            <p>Siswa fokus mengerjakan tugas assembly secara individu</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-type="image" data-src="assets/img/dokumentasi/dok-bimbingan-mandiri.webp">
+          <img src="assets/img/dokumentasi/dok-bimbingan-mandiri.webp" alt="Bimbingan Pengerjaan Drawing" loading="lazy" width="1400" height="1051">
+          <div class="gallery-caption">
+            <h3>Bimbingan Pengerjaan Drawing</h3>
+            <p>Mendampingi siswa menyusun gambar kerja menggunakan Inventor</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-type="image" data-src="assets/img/dokumentasi/dok-praktik-cad-2.webp">
+          <img src="assets/img/dokumentasi/dok-praktik-cad-2.webp" alt="Latihan Modeling 3D" loading="lazy" width="1400" height="933">
+          <div class="gallery-caption">
+            <h3>Latihan Modeling 3D</h3>
+            <p>Siswa berlatih membuat komponen mekanik di Autodesk Inventor</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-type="image" data-src="assets/img/dokumentasi/dok-bimbingan-individu.webp">
+          <img src="assets/img/dokumentasi/dok-bimbingan-individu.webp" alt="Bimbingan Individu" loading="lazy" width="1400" height="933">
+          <div class="gallery-caption">
+            <h3>Bimbingan Individu</h3>
+            <p>Diskusi solusi teknis bersama siswa di sela praktik</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Galeri Lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Tutup">&times;</button>
+        <button class="lightbox-prev" aria-label="Sebelumnya">&#8249;</button>
+        <button class="lightbox-next" aria-label="Berikutnya">&#8250;</button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge coral"><i class="fa-solid fa-envelope-open-text"></i> Kontak</div>
+        <h2 class="section-title">Hubungi Saya</h2>
+        <p class="section-subtitle">
+          Jangan ragu untuk menghubungi saya untuk diskusi atau kolaborasi
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Mari Terhubung!</h3>
+          <p>
+            Saya selalu terbuka untuk berdiskusi tentang pendidikan, berbagi
+            pengalaman, atau berkolaborasi dalam proyek pembelajaran. Silakan
+            hubungi melalui form atau kontak di bawah ini.
+          </p>
+          <div class="contact-details">
+            <div class="contact-detail-item email-chooser" style="cursor: pointer;">
+              <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="detail-label">Email</div>
+                <div class="detail-value">fannyfatchurrahman@gmail.com</div>
+              </div>
+            </div>
+            <a href="https://wa.me/6281227448532" target="_blank" rel="noopener noreferrer" class="contact-detail-item" style="text-decoration: none; color: inherit;">
+              <div class="detail-icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="detail-label">WhatsApp</div>
+                <div class="detail-value">Chat via WhatsApp</div>
+              </div>
+            </a>
+            <a href="https://maps.google.com/?q=Klaten,+Indonesia" target="_blank" rel="noopener noreferrer" class="contact-detail-item" style="text-decoration: none; color: inherit;">
+              <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="detail-label">Lokasi</div>
+                <div class="detail-value">Klaten, Indonesia</div>
+              </div>
+            </a>
+          </div>
+          <!-- Social Media Links -->
+          <div class="contact-social">
+            <h4 style="font-size:0.95rem; color:var(--gray-600); margin:24px 0 12px; text-transform:uppercase; letter-spacing:0.05em;">Ikuti Saya</h4>
+            <div class="social-links-grid">
+              <a href="https://www.linkedin.com/in/fanny-fatchurrahman/" target="_blank" rel="noopener noreferrer" class="contact-social-btn linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/fannyfatchur/" target="_blank" rel="noopener noreferrer" class="contact-social-btn instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/@fannyfatchurrahman6134" target="_blank" rel="noopener noreferrer" class="contact-social-btn youtube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="https://github.com/fannyf123" target="_blank" rel="noopener noreferrer" class="contact-social-btn github" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Email Popup -->
+          <div class="email-popup-overlay" id="emailPopup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:10000; align-items:center; justify-content:center;">
+            <div class="email-popup-box" style="background:#fff; border-radius:20px; padding:32px; max-width:320px; width:90%; text-align:center; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+              <h4 style="margin:0 0 8px; font-size:1.1rem; color:#0F5EA8;">Kirim Email via</h4>
+              <p style="margin:0 0 20px; font-size:0.85rem; color:#666;">Pilih cara mengirim email</p>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fannyfatchurrahman@gmail.com" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:12px; padding:14px 18px; border-radius:12px; text-decoration:none; color:#333; background:rgba(234,67,53,0.08); margin-bottom:10px; transition:all 0.2s;">
+                <i class="fab fa-google" style="color:#EA4335; font-size:1.3rem;"></i>
+                <span style="font-weight:600;">Buka Gmail Web</span>
+              </a>
+              <a href="mailto:fannyfatchurrahman@gmail.com" style="display:flex; align-items:center; gap:12px; padding:14px 18px; border-radius:12px; text-decoration:none; color:#333; background:rgba(15,94,168,0.08); transition:all 0.2s;">
+                <i class="fas fa-paper-plane" style="color:#0F5EA8; font-size:1.3rem;"></i>
+                <span style="font-weight:600;">Email Client</span>
+              </a>
+              <button class="email-popup-close" style="margin-top:16px; background:none; border:none; color:#999; cursor:pointer; font-size:0.85rem;">Batal</button>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form reveal-right">
+          <form id="contactForm" action="https://formspree.io/f/meenbpro" method="POST">
+            <div class="form-group floating">
+              <input type="text" id="name" name="name" placeholder=" " required />
+              <label for="name">Nama Lengkap</label>
+            </div>
+            <div class="form-group floating">
+              <input type="email" id="email" name="email" placeholder=" " required />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-group floating">
+              <input type="text" id="subject" name="subject" placeholder=" " />
+              <label for="subject">Subjek</label>
+            </div>
+            <div class="form-group floating">
+              <textarea id="message" name="message" placeholder=" " required></textarea>
+              <label for="message">Pesan</label>
+            </div>
+            <button type="submit" class="form-submit">Kirim Pesan 🚀</button>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <div class="success-icon">✅</div>
+              <p>Pesan berhasil terkirim! Terima kasih.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/img/ppg-logo-clean.png" alt="Logo PPG" style="height:32px; background:#fff; border-radius:6px; padding:3px 5px;" />
+            <span style="display:block; margin-top:6px;">E-Portfolio</span>
+          </div>
+          <p class="footer-tagline">Calon Guru Teknik Pemesinan<br>PPG Prajabatan 2025-2026, UST</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/fanny-fatchurrahman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/fannyfatchur/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@fannyfatchurrahman6134" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/fannyf123" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link github" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="footer-sitemap">
+          <h5>Navigasi</h5>
+          <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#about">Profil</a></li>
+            <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#portfolio">Artefak</a></li>
+            <li><a href="#analisis">Analisis</a></li>
+            <li><a href="#penilaian">Penilaian</a></li>
+            <li><a href="#model-guru">Model Guru</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#certificates">Sertifikat</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+          <a href="#" id="ep1FooterBack" class="ep2-footer-switch" aria-label="Ganti ke E-Portfolio lain">
+            <span class="ep2-footer-switch-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </span>
+            <span class="ep2-footer-switch-text">
+              <span class="ep2-footer-switch-label">Ganti Portofolio</span>
+              <span class="ep2-footer-switch-sub">Kembali ke pemilihan E-Portfolio</span>
+            </span>
+            <span class="ep2-footer-switch-arrow" aria-hidden="true">
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fanny Fatchurrahman. PPG Prajabatan 2025-2026, UST</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+
+  <!-- ============================================
+       E-PORTFOLIO 2 - REFLEKSI & FILOSOFI MENGAJAR
+       Hidden by default, shown when user selects E-Portfolio 2
+       ============================================ -->
+  <div class="eportfolio2-wrapper" id="eportfolio2Wrapper" style="display:none;">
+    <div class="ep2-live-bg" aria-hidden="true">
+      <div class="ep2-aurora"></div>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <div class="ep2-geo"></div><div class="ep2-geo"></div><div class="ep2-geo"></div>
+      <div class="ep2-geo"></div><div class="ep2-geo"></div><div class="ep2-geo"></div>
+      <div class="ep2-orb"></div><div class="ep2-orb"></div><div class="ep2-orb"></div><div class="ep2-orb"></div>
+      <div class="ep2-line"></div><div class="ep2-line"></div><div class="ep2-line"></div>
+    </div>
+    <nav class="navbar ep2-navbar" id="ep2Navbar">
+      <div class="container">
+        <a href="#ep2-hero" class="nav-logo" id="ep2BackBtn">
+          <img src="assets/img/ppg-logo-clean.png" alt="Logo PPG" width="48" height="48" />
+        </a>
+        <ul class="nav-links" id="ep2NavLinks">
+          <li><a href="#ep2-hero" class="active">Beranda</a></li>
+          <li><a href="#ep2-refleksi">Refleksi PPL</a></li>
+          <li><a href="#ep2-filosofi">Filosofi Mengajar</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="ep2ThemeToggle" aria-label="Toggle dark mode" title="Mode Gelap/Terang">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button class="theme-toggle perf-toggle" id="ep2PerfToggle" aria-label="Toggle Performance Mode" title="Performance Mode">
+            <span class="perf-icon">⚡</span>
+          </button>
+          <button class="home-btn" id="ep2BackChooser" aria-label="Kembali ke Pilihan Portfolio" title="Kembali ke Pilihan Portfolio">
+            <i class="fa-solid fa-house"></i>
+          </button>
+          <button class="hamburger" id="ep2Hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: Hero / Beranda -->
+    <section class="ep2-hero" id="ep2-hero">
+      <div class="ep2-hero-shapes" aria-hidden="true">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-square"></div>
+        <div class="shape shape-triangle"></div>
+      </div>
+      <div class="container">
+        <div class="ep2-hero-content">
+          <!-- Top row: identity + main message -->
+          <div class="ep2-hero-top">
+            <div class="ep2-hero-left">
+              <div class="ep2-hero-photo">
+                <img src="assets/img/profile.jpeg" alt="Foto Profil Fanny Fatchurrahman" width="300" height="300" />
+              </div>
+              <div class="ep2-hero-identity">
+                <h2 class="ep2-hero-name">Fanny Fatchurrahman</h2>
+                <p class="ep2-hero-role">Calon Guru Teknik Pemesinan</p>
+                <div class="ep2-hero-tags">
+                  <span class="ep2-hero-tag"><i class="fa-solid fa-graduation-cap"></i> PPG Prajabatan 2026</span>
+                  <span class="ep2-hero-tag"><i class="fa-solid fa-school"></i> SMKN 2 Depok</span>
+                </div>
+              </div>
+              <div class="ep2-hero-social">
+                <a href="https://www.linkedin.com/in/fanny-fatchurrahman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/fannyfatchur/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@fannyfatchurrahman6134" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/fannyf123" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="ep2-hero-right">
+              <div class="ep2-hero-greeting">
+                <i class="fa-solid fa-book-open"></i> E-Portfolio 2 — UAS
+              </div>
+              <h1 class="ep2-title">Refleksi Akhir &amp;<br>Filosofi Mengajar</h1>
+              <p class="ep2-subtitle">Dokumentasi refleksi perjalanan Praktik Pengalaman Lapangan Terbimbing pada mata pelajaran Gambar Teknik Manufaktur kelas XI TPM SMKN 2 Depok, beserta prinsip-prinsip yang mendasari praktik pengajaran saya sebagai calon guru profesional.</p>
+              <div class="ep2-hero-quote">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>Mengajar bukan sekadar mentransfer pengetahuan, melainkan menyalakan api semangat belajar yang akan terus menyala sepanjang hayat.</p>
+              </div>
+              <div class="ep2-hero-actions">
+                <a href="#ep2-refleksi" class="btn btn-primary"><i class="fa-solid fa-clipboard-list"></i> Lihat Refleksi</a>
+                <a href="#ep2-filosofi" class="btn btn-secondary"><i class="fa-solid fa-lightbulb"></i> Filosofi Mengajar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom row: full-width preview cards -->
+          <div class="ep2-hero-preview">
+            <div class="ep2-hero-preview-card" data-accent="teal">
+              <div class="ep2-hero-preview-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+              <div class="ep2-hero-preview-text">
+                <div class="ep2-hero-preview-label">Section 01</div>
+                <h3>Refleksi Akhir PPL Terbimbing</h3>
+                <p>3 pertanyaan refleksi mendalam tentang pembelajaran, tantangan &amp; umpan balik selama PPL.</p>
+              </div>
+              <div class="ep2-hero-preview-num">3</div>
+            </div>
+            <div class="ep2-hero-preview-card" data-accent="lavender">
+              <div class="ep2-hero-preview-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <div class="ep2-hero-preview-text">
+                <div class="ep2-hero-preview-label">Section 02</div>
+                <h3>Filosofi Mengajar</h3>
+                <p>Prinsip pembelajaran bermakna, fasilitator scaffolder, &amp; karakter profesional dengan 4 nilai inti.</p>
+              </div>
+              <div class="ep2-hero-preview-num">3+4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ep2-scroll-indicator">
+        <div class="mouse"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Refleksi Akhir PPL Terbimbing -->
+    <section class="ep2-section" id="ep2-refleksi">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge teal"><i class="fa-solid fa-clipboard-list"></i> Refleksi PPL Terbimbing</div>
+          <h2 class="section-title">Refleksi Akhir PPL Terbimbing</h2>
+          <p class="section-subtitle">Klik kartu pertanyaan di bawah untuk melihat refleksi mendalam</p>
+        </div>
+        <div class="ep2-refleksi-layout">
+        <div class="ep2-questions-grid">
+          <button class="ep2-question-card" data-ep2-modal="ep2-q1">
+            <div class="ep2-question-icon teal"><i class="fa-solid fa-book-open"></i></div>
+            <div class="ep2-question-num">01</div>
+            <h3 class="ep2-question-title">Apa yang Telah Saya Pelajari?</h3>
+            <p class="ep2-question-text">Apa yang telah mahasiswa pelajari sebagai peserta PPG calon guru selama tahapan PPL Terbimbing dari awal hingga akhir?</p>
+            <span class="ep2-question-cta">Lihat Refleksi <i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+          <button class="ep2-question-card" data-ep2-modal="ep2-q2">
+            <div class="ep2-question-icon coral"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="ep2-question-num">02</div>
+            <h3 class="ep2-question-title">Pengalaman Menantang &amp; Solusi</h3>
+            <p class="ep2-question-text">Apakah terdapat pengalaman yang menantang dan bagaimana solusi dari permasalahan tersebut?</p>
+            <span class="ep2-question-cta">Lihat Refleksi <i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+          <button class="ep2-question-card" data-ep2-modal="ep2-q3">
+            <div class="ep2-question-icon lavender"><i class="fa-solid fa-comments"></i></div>
+            <div class="ep2-question-num">03</div>
+            <h3 class="ep2-question-title">Umpan Balik &amp; Saran Konstruktif</h3>
+            <p class="ep2-question-text">Apakah umpan balik atau saran konstruktif yang diberikan kepada mahasiswa dalam diskusi refleksi akhir?</p>
+            <span class="ep2-question-cta">Lihat Refleksi <i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+        </div>
+        <div class="ep2-refleksi-summary">
+          <div class="ep2-refleksi-summary-item">
+            <span class="ep2-refleksi-summary-num">01</span>
+            <div><strong>Observasi</strong><p>Mengenali karakter, gaya belajar, dan kebutuhan peserta didik.</p></div>
+          </div>
+          <div class="ep2-refleksi-summary-item">
+            <span class="ep2-refleksi-summary-num">02</span>
+            <div><strong>Asistensi</strong><p>Belajar pengelolaan kelas Gambar Teknik Manufaktur, pendampingan pengerjaan job, dan demonstrasi penggunaan Autodesk Inventor.</p></div>
+          </div>
+          <div class="ep2-refleksi-summary-item">
+            <span class="ep2-refleksi-summary-num">03</span>
+            <div><strong>Praktik</strong><p>Menerapkan pembelajaran terbimbing pada materi assembly drawing dan mengelola alur kerja siswa di lab CAD.</p></div>
+          </div>
+          <div class="ep2-refleksi-summary-item">
+            <span class="ep2-refleksi-summary-num">04</span>
+            <div><strong>Evaluasi</strong><p>Menerima umpan balik untuk perbaikan PPL Mandiri.</p></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Filosofi Mengajar -->
+    <section class="ep2-section ep2-filosofi" id="ep2-filosofi">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge lavender"><i class="fa-solid fa-lightbulb"></i> Filosofi Mengajar</div>
+          <h2 class="section-title">Filosofi Mengajar</h2>
+          <p class="section-subtitle">Prinsip, keyakinan, dan nilai yang mendasari praktik pengajaran saya</p>
+        </div>
+        <div class="ep2-filosofi-content">
+        <div class="ep2-quote-banner">
+          <div class="ep2-quote-mark">“</div>
+          <blockquote>Mengajar bukan sekadar mentransfer pengetahuan, melainkan menyalakan api semangat belajar yang akan terus menyala sepanjang hayat.</blockquote>
+          <cite>— Fanny Fatchurrahman</cite>
+        </div>
+        <div class="ep2-filosofi-compact-grid">
+          <div class="ep2-filosofi-mini-card" data-accent="teal">
+            <div class="ep2-filosofi-mini-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
+            <h3>Pembelajaran Bermakna</h3>
+            <p class="ep2-filosofi-mini-summary">Berbasis <em>Experiential Learning</em> Kolb — setiap konsep teori diikuti praktik langsung di lab CAD.</p>
+            <button class="ep2-filosofi-expand" data-ep2-expand="f1">Baca Selengkapnya <i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+          <div class="ep2-filosofi-mini-card" data-accent="sky">
+            <div class="ep2-filosofi-mini-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+            <h3>Fasilitator &amp; Scaffolder</h3>
+            <p class="ep2-filosofi-mini-summary">Mengacu pada <em>ZPD Vygotsky</em> &amp; <em>TaRL</em> — pendampingan bertahap sesuai level siswa.</p>
+            <button class="ep2-filosofi-expand" data-ep2-expand="f2">Baca Selengkapnya <i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+          <div class="ep2-filosofi-mini-card" data-accent="lavender">
+            <div class="ep2-filosofi-mini-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+            <h3>Karakter Profesional</h3>
+            <p class="ep2-filosofi-mini-summary">Filosofi <em>Ki Hajar Dewantara</em> &amp; <em>Paulo Freire</em> — disiplin, ketelitian, dan integritas kerja.</p>
+            <button class="ep2-filosofi-expand" data-ep2-expand="f3">Baca Selengkapnya <i class="fa-solid fa-chevron-down"></i></button>
+          </div>
+        </div>
+        <div class="ep2-values-section">
+          <h3 class="ep2-values-title">Nilai-Nilai Inti</h3>
+          <div class="ep2-values-grid">
+            <div class="ep2-value-mini">
+              <div class="ep2-value-mini-icon teal"><i class="fa-solid fa-bullseye"></i></div>
+              <div><h4>Relevansi</h4><p>Pembelajaran relevan dengan kebutuhan industri</p></div>
+            </div>
+            <div class="ep2-value-mini">
+              <div class="ep2-value-mini-icon sky"><i class="fa-solid fa-people-group"></i></div>
+              <div><h4>Kolaborasi</h4><p>Belajar bersama membangun pemahaman lebih dalam</p></div>
+            </div>
+            <div class="ep2-value-mini">
+              <div class="ep2-value-mini-icon lavender"><i class="fa-solid fa-chart-line"></i></div>
+              <div><h4>Pertumbuhan</h4><p>Setiap kesalahan adalah kesempatan belajar</p></div>
+            </div>
+            <div class="ep2-value-mini">
+              <div class="ep2-value-mini-icon amber"><i class="fa-solid fa-rocket"></i></div>
+              <div><h4>Inovasi</h4><p>Eksplorasi metode dan teknologi baru</p></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EP2 Modal Overlay -->
+    <div class="ep2-modal-overlay" id="ep2ModalOverlay" aria-hidden="true">
+      <div class="ep2-modal-container">
+        <button class="ep2-modal-close" id="ep2ModalClose" aria-label="Tutup">&times;</button>
+        <div class="ep2-modal-content" id="ep2ModalContent"></div>
+      </div>
+    </div>
+
+    <!-- Modal Templates -->
+    <template id="ep2-q1-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon teal"><i class="fa-solid fa-book-open"></i></div>
+        <div>
+          <span class="ep2-modal-tag teal">Pertanyaan 1</span>
+          <h3>Apa yang Telah Saya Pelajari Sebagai Peserta PPG Calon Guru</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Selama menjalani tahapan PPL Terbimbing dari awal hingga akhir, saya memperoleh banyak pembelajaran berharga sebagai peserta PPG calon guru:</p>
+        <div class="ep2-modal-timeline">
+          <div class="ep2-modal-step"><span class="ep2-modal-step-num teal">1</span><div><h4>Tahap Observasi</h4><p>Saya belajar mengamati dinamika kelas XI TPM secara menyeluruh. Setiap peserta didik memiliki gaya belajar yang berbeda, terutama saat mengerjakan job Gambar Teknik Manufaktur di lab CAD.</p></div></div>
+          <div class="ep2-modal-step"><span class="ep2-modal-step-num sky">2</span><div><h4>Tahap Asistensi</h4><p>Saya belajar bagaimana guru pamong mengelola kelas Gambar Teknik Manufaktur, mendampingi siswa membaca jobsheet, serta memastikan setiap siswa mendapat pendampingan yang memadai saat menggunakan Autodesk Inventor.</p></div></div>
+          <div class="ep2-modal-step"><span class="ep2-modal-step-num amber">3</span><div><h4>Tahap Praktik Terbimbing</h4><p>Saya mengimplementasikan modul ajar berbasis Deep Learning yang telah disusun untuk materi Assembly Drawing. Manajemen waktu menjadi krusial agar siswa dapat menyelesaikan rangkaian RPP, LKM, dan praktik di lab CAD secara utuh.</p></div></div>
+          <div class="ep2-modal-step"><span class="ep2-modal-step-num lavender">4</span><div><h4>Tahap Refleksi &amp; Evaluasi</h4><p>Saya menyadari pentingnya refleksi berkelanjutan. Setiap pertemuan mengajar memberikan insight baru tentang bagaimana menjadi guru yang lebih baik.</p></div></div>
+        </div>
+      </div>
+    </template>
+
+    <template id="ep2-q2-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon coral"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div>
+          <span class="ep2-modal-tag coral">Pertanyaan 2</span>
+          <h3>Pengalaman Menantang &amp; Solusi yang Diterapkan</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Selama PPL Terbimbing, terdapat tiga pengalaman menantang yang menjadi pembelajaran bermakna:</p>
+        <div class="ep2-modal-challenges">
+          <div class="ep2-modal-challenge">
+            <div class="ep2-modal-challenge-head"><span class="ep2-modal-tag problem"><i class="fa-solid fa-circle-exclamation"></i> Tantangan 1</span><h4>Heterogenitas Kemampuan Siswa</h4></div>
+            <p class="ep2-modal-challenge-problem">Dalam satu kelas Gambar Teknik Manufaktur, terdapat kesenjangan kemampuan yang signifikan antara siswa yang sudah lancar menggunakan Autodesk Inventor dan yang masih kesulitan membaca gambar teknik dasar.</p>
+            <div class="ep2-modal-solution"><strong><i class="fa-solid fa-lightbulb"></i> Solusi:</strong><p>Strategi pembelajaran diferensiasi dengan jobsheet bertingkat (basic, intermediate, advanced) dan peer tutoring antar siswa.</p></div>
+          </div>
+          <div class="ep2-modal-challenge">
+            <div class="ep2-modal-challenge-head"><span class="ep2-modal-tag problem"><i class="fa-solid fa-circle-exclamation"></i> Tantangan 2</span><h4>Keterbatasan Waktu di Lab CAD</h4></div>
+            <p class="ep2-modal-challenge-problem">Alokasi waktu pertemuan yang terbatas sering kali tidak cukup untuk menyelesaikan satu siklus pembelajaran lengkap dari pengantar materi, demonstrasi software, hingga pengerjaan job assembly.</p>
+            <div class="ep2-modal-solution"><strong><i class="fa-solid fa-lightbulb"></i> Solusi:</strong><p>Optimalisasi waktu dengan video demonstrasi pre-class (flipped learning) dan SOP penggunaan tools Autodesk Inventor yang jelas.</p></div>
+          </div>
+          <div class="ep2-modal-challenge">
+            <div class="ep2-modal-challenge-head"><span class="ep2-modal-tag problem"><i class="fa-solid fa-circle-exclamation"></i> Tantangan 3</span><h4>Menjaga Motivasi Siswa</h4></div>
+            <p class="ep2-modal-challenge-problem">Beberapa siswa menunjukkan penurunan motivasi ketika menghadapi kegagalan dalam praktik (constraint assembly tidak sesuai atau gambar tidak memenuhi standar).</p>
+            <div class="ep2-modal-solution"><strong><i class="fa-solid fa-lightbulb"></i> Solusi:</strong><p>Membangun budaya "gagal adalah bagian dari belajar" dengan sistem reward berbasis progress dan feedback konstruktif.</p></div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="ep2-q3-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon lavender"><i class="fa-solid fa-comments"></i></div>
+        <div>
+          <span class="ep2-modal-tag lavender">Pertanyaan 3</span>
+          <h3>Umpan Balik &amp; Saran Konstruktif untuk PPL Mandiri</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Berikut adalah umpan balik dan saran konstruktif yang diberikan dalam diskusi refleksi akhir:</p>
+        <div class="ep2-modal-feedback-list">
+          <div class="ep2-modal-feedback">
+            <div class="ep2-modal-feedback-source"><i class="fa-solid fa-user-tie"></i> Guru Pamong</div>
+            <blockquote>"Kemampuan penguasaan materi sudah baik, namun perlu meningkatkan variasi metode penilaian. Coba eksplorasi asesmen autentik yang lebih beragam."</blockquote>
+            <div class="ep2-modal-action"><i class="fa-solid fa-arrow-right"></i> <strong>Tindak Lanjut:</strong> Mengembangkan instrumen asesmen autentik untuk pembelajaran Gambar Teknik Manufaktur, termasuk rubrik penilaian gambar kerja dan assembly drawing.</div>
+          </div>
+          <div class="ep2-modal-feedback">
+            <div class="ep2-modal-feedback-source"><i class="fa-solid fa-user-graduate"></i> Dosen Pembimbing</div>
+            <blockquote>"Perencanaan pembelajaran sudah terstruktur. Tingkatkan kemampuan mengintegrasikan teknologi digital ke dalam pembelajaran praktik."</blockquote>
+            <div class="ep2-modal-action"><i class="fa-solid fa-arrow-right"></i> <strong>Tindak Lanjut:</strong> Mengembangkan media pembelajaran berbasis simulasi Autodesk Inventor dan integrasi LMS untuk pengumpulan job siswa.</div>
+          </div>
+          <div class="ep2-modal-feedback">
+            <div class="ep2-modal-feedback-source"><i class="fa-solid fa-people-group"></i> Teman Sejawat</div>
+            <blockquote>"Interaksi dengan siswa sudah natural. Coba lebih banyak memberikan kesempatan siswa untuk presentasi hasil kerja mereka."</blockquote>
+            <div class="ep2-modal-action"><i class="fa-solid fa-arrow-right"></i> <strong>Tindak Lanjut:</strong> Menambahkan sesi presentasi hasil gambar kerja siswa dan rubrik penilaian komunikasi teknis.</div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="ep2-f1-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon teal"><i class="fa-solid fa-hands-holding-child"></i></div>
+        <div>
+          <span class="ep2-modal-tag teal">Filosofi 1</span>
+          <h3>Pembelajaran Bermakna</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Saya meyakini bahwa pembelajaran yang paling bermakna adalah pembelajaran yang terhubung langsung dengan pengalaman nyata peserta didik. Sejalan dengan teori <em>Experiential Learning</em> dari David Kolb (1984), pengetahuan dibangun melalui siklus pengalaman konkret, refleksi, konseptualisasi, dan eksperimentasi aktif.</p>
+        <p>Pada pembelajaran Gambar Teknik Manufaktur, setiap konsep teori — pembacaan jobsheet, aturan proyeksi, hingga prinsip assembly — selalu diikuti praktik langsung di lab CAD menggunakan Autodesk Inventor, refleksi atas hasil kerja siswa, dan perbaikan berkelanjutan pada siklus berikutnya.</p>
+        <p>Dengan begitu, siswa tidak sekadar menjadi pengguna software, melainkan <em>problem solver</em> yang adaptif: mampu membaca kebutuhan gambar kerja, menerjemahkannya ke dalam model 3D yang sesuai standar, dan siap beradaptasi dengan tuntutan dunia industri manufaktur.</p>
+      </div>
+    </template>
+
+    <template id="ep2-f2-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon coral"><i class="fa-solid fa-person-chalkboard"></i></div>
+        <div>
+          <span class="ep2-modal-tag coral">Filosofi 2</span>
+          <h3>Fasilitator &amp; Scaffolder</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Mengacu pada <em>Zone of Proximal Development</em> (ZPD) dari Lev Vygotsky, saya memposisikan diri sebagai fasilitator yang memberikan scaffolding tepat sesuai kebutuhan setiap peserta didik. Tugas guru adalah menjembatani jarak antara kemampuan aktual dengan kemampuan potensial siswa.</p>
+        <p>Dalam pembelajaran Gambar Teknik Manufaktur, scaffolding saya wujudkan melalui alur: demonstrasi penuh penggunaan tools Autodesk Inventor → <em>guided practice</em> mengerjakan job sederhana bersama → <em>independent practice</em> menyelesaikan assembly drawing secara mandiri. Setiap tahap disertai checkpoint agar siswa yang tertinggal dapat segera dibantu sebelum melangkah ke materi berikutnya.</p>
+        <p>Saya juga mengadopsi prinsip <em>Teaching at the Right Level</em> (TaRL) — setiap siswa memiliki ritme belajar yang valid. Jobsheet bertingkat dan peer tutoring saya gunakan agar siswa yang sudah mahir tetap tertantang, sementara siswa yang masih menyesuaikan diri tetap mendapat ruang untuk tumbuh. Kesabaran dan empati menjadi modal utama saya dalam membangun ekosistem belajar yang inklusif.</p>
+      </div>
+    </template>
+
+    <template id="ep2-f3-template">
+      <div class="ep2-modal-header">
+        <div class="ep2-card-icon lavender"><i class="fa-solid fa-helmet-safety"></i></div>
+        <div>
+          <span class="ep2-modal-tag lavender">Filosofi 3</span>
+          <h3>Karakter Profesional</h3>
+        </div>
+      </div>
+      <div class="ep2-modal-body">
+        <p>Pendidikan kejuruan harus membentuk karakter profesional yang utuh. Merujuk pada filosofi Ki Hajar Dewantara — <em>Ing Ngarso Sung Tulodo, Ing Madyo Mangun Karso, Tut Wuri Handayani</em>, saya berusaha menjadi teladan dalam disiplin, ketelitian, dan etos kerja yang relevan dengan tuntutan dunia industri manufaktur.</p>
+        <p>Dalam pembelajaran Gambar Teknik Manufaktur, nilai-nilai profesional saya tanamkan secara konkret: ketelitian melalui pembacaan jobsheet dan pemberian dimensi yang akurat, kejujuran melalui pengakuan revisi dan dokumentasi proses kerja, serta tanggung jawab melalui penyelesaian tugas tepat waktu dan menjaga ketertiban file project di lab CAD.</p>
+        <p>Sebagaimana Paulo Freire dalam <em>Pedagogy of the Oppressed</em>, pendidikan sejati adalah proses pembebasan yang memampukan peserta didik menjadi subjek aktif dalam kehidupannya. Saya berupaya menumbuhkan suara siswa melalui dialog kelas, refleksi atas hasil gambar kerja, dan ruang untuk mengkritisi proses belajar mereka sendiri sehingga karakter profesional terbentuk dari kesadaran, bukan paksaan.</p>
+      </div>
+    </template>
+
+    <!-- EP2 Footer -->
+    <footer class="footer ep2-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="assets/img/ppg-logo-clean.png" alt="Logo PPG" style="height:32px; background:#fff; border-radius:6px; padding:3px 5px;" />
+              <span style="display:block; margin-top:6px;">E-Portfolio</span>
+            </div>
+            <p class="footer-tagline">Calon Guru Teknik Pemesinan<br>PPG Prajabatan 2025-2026, UST</p>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/fanny-fatchurrahman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/fannyfatchur/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@fannyfatchurrahman6134" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-link youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://github.com/fannyf123" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link github" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-sitemap">
+            <h5>Navigasi</h5>
+            <ul>
+              <li><a href="#ep2-hero">Beranda</a></li>
+              <li><a href="#ep2-refleksi">Refleksi PPL</a></li>
+              <li><a href="#ep2-filosofi">Filosofi Mengajar</a></li>
+            </ul>
+            <a href="#" id="ep2FooterBack" class="ep2-footer-switch" aria-label="Ganti ke E-Portfolio lain">
+              <span class="ep2-footer-switch-icon" aria-hidden="true">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </span>
+              <span class="ep2-footer-switch-text">
+                <span class="ep2-footer-switch-label">Ganti Portofolio</span>
+                <span class="ep2-footer-switch-sub">Kembali ke pemilihan E-Portfolio</span>
+              </span>
+              <span class="ep2-footer-switch-arrow" aria-hidden="true">
+                <i class="fa-solid fa-chevron-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Fanny Fatchurrahman. PPG Prajabatan 2025-2026, UST</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- Performance Mode Info Popup -->
+  <div class="perf-info-overlay" id="perfInfoOverlay" role="dialog" aria-modal="true" aria-labelledby="perfInfoTitle">
+    <div class="perf-info-box">
+      <h3 class="perf-info-title" id="perfInfoTitle">
+        <span class="perf-bolt">⚡</span> Performance Mode
+      </h3>
+      <p>
+        Website ini punya banyak efek visual seperti partikel bergerak, blur kaca, dan animasi latar belakang. Kalau scroll terasa berat di laptop atau HP, aktifkan <strong>Performance Mode</strong> untuk mengurangi efek-efek tersebut.
+      </p>
+      <ul>
+        <li>Partikel dan bentuk melayang dimatikan</li>
+        <li>Efek blur dan animasi latar dikurangi</li>
+        <li>Konten utama, hover, dan animasi reveal tetap berjalan</li>
+      </ul>
+      <p style="font-size:0.82rem; color:var(--gray-500);">
+        Pilihan ini disimpan otomatis. Anda bisa nyalakan/matikan kapan saja lewat tombol ⚡ di navbar.
+      </p>
+      <div class="perf-info-actions">
+        <button class="perf-info-btn ghost" id="perfInfoLater">Nanti saja</button>
+        <button class="perf-info-btn primary" id="perfInfoEnable">Aktifkan Sekarang</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Performance Mode Toast -->
+  <div class="perf-toast" id="perfToast" role="status" aria-live="polite">
+    <span class="perf-toast-icon">⚡</span>
+    <span class="perf-toast-text">Performance Mode aktif</span>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,28 @@
+# Cache static assets aggresif (1 tahun, immutable hash di nama file)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache gambar dan font 1 minggu
+/*.png
+  Cache-Control: public, max-age=604800
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+/*.woff2
+  Cache-Control: public, max-age=2592000
+
+# HTML jangan di-cache lama, agar update cepat terlihat
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Security headers
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

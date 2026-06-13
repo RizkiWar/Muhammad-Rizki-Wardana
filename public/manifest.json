@@ -1,0 +1,23 @@
+{
+  "name": "E-Portfolio Fanny Fatchurrahman",
+  "short_name": "E-Portfolio Fanny",
+  "description": "E-Portfolio PPG Prajabatan 2026 — Fanny Fatchurrahman",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FAFBFD",
+  "theme_color": "#FF6B6B",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
