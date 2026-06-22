@@ -11,15 +11,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 /* ======================= LIGHT MODE (Default) ======================= */
-:root{--bg:#FAFBFC;--bg-alt:#F0F2F5;--surface:#fff;--ink:#1A1F2E;--ink-soft:#5A6378;--primary:#1B6B4A;--accent:#3B82F6;--line:rgba(26,31,46,.08);--shadow:0 16px 40px -24px rgba(26,31,46,.15);--radius:16px;--radius-sm:8px;--font-display:Fraunces,serif;--font-body:"Plus Jakarta Sans",sans-serif;color-scheme:light}
+:root{--bg:#FAFBFC;--bg-alt:#F0F2F5;--surface:rgba(255,255,255,0.9);--surface-light:rgba(255,255,255,0.7);--ink:#1A1F2E;--ink-soft:#5A6378;--primary:#1B6B4A;--accent:#3B82F6;--line:rgba(26,31,46,.1);--shadow:0 16px 40px -24px rgba(26,31,46,.15);--radius:16px;--radius-sm:8px;--font-display:Fraunces,serif;--font-body:"Plus Jakarta Sans",sans-serif;color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:var(--bg) url("Images/Background-Porto.png") center/cover fixed no-repeat;color:var(--ink);line-height:1.7;font-size:16px;min-height:100vh}
 main{padding-top:64px}
-.icon-btn{width:38px;height:38px;border-radius:8px;background:var(--bg-alt);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink-soft);transition:color .2s,background .2s}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;background:rgba(250,251,252,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navbar__inner{max-width:1120px;margin:0 auto;padding:0 2rem;height:100%;display:flex;align-items:center;justify-content:space-between}
+.navbar__brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.navbar__logo{width:36px;height:36px;border-radius:8px;object-fit:contain}
+.navbar__name{font-size:15px;font-weight:600;line-height:1.3;color:var(--ink)}
+.navbar__role{font-weight:400;color:var(--ink-soft);font-size:13px}
+.navbar__nav{display:flex;align-items:center;gap:4px}
+.navbar__nav a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--ink-soft);text-decoration:none;transition:all .2s}
+.navbar__nav a:hover{color:var(--primary);background:rgba(27,107,74,0.08)}
+.navbar__nav a.active{color:var(--primary);font-weight:600}
+.navbar__actions{display:flex;align-items:center;gap:8px}
+.icon-btn{width:38px;height:38px;border-radius:8px;background:var(--bg-alt);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink-soft);transition:all .2s}
 .icon-btn:hover{color:var(--ink);background:var(--surface)}
+.icon-btn svg{width:18px;height:18px;color:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all .2s}
-.btn--back{width:38px;height:38px;padding:0;border-radius:8px;background:var(--bg-alt);border:1px solid var(--line);color:var(--ink-soft);text-decoration:none}
+.btn--back{width:38px;height:38px;padding:0;border-radius:8px;background:var(--bg-alt);border:1px solid var(--line);color:var(--ink-soft);text-decoration:none;display:flex;align-items:center;justify-content:center}
+.btn--back:hover{background:var(--surface);color:var(--ink)}
 .hero{position:relative;padding:80px 2rem 60px;text-align:center;border-bottom:1px solid var(--line);overflow:hidden}
 .hero__bg{position:absolute;inset:0;z-index:0}
 .hero__bg-image{width:100%;height:100%;object-fit:cover;opacity:.06}
@@ -36,7 +49,7 @@ main{padding-top:64px}
 .section__title{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--ink);margin-bottom:12px}
 .section__lede{font-size:16px;color:var(--ink-soft);max-width:700px;margin:0 auto;line-height:1.75}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s,box-shadow .3s}
+.card{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:all .3s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card h4{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--ink)}
 .card p{font-size:14px;color:var(--ink-soft);line-height:1.65}
@@ -47,7 +60,7 @@ main{padding-top:64px}
 .card:nth-child(4) .card-icon{background:rgba(245,158,11,.1)}
 .card:nth-child(5) .card-icon{background:rgba(139,92,246,.1)}
 .card:nth-child(6) .card-icon{background:rgba(236,72,153,.1)}
-.detail-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.detail-card{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
 .detail-card h3{font-family:var(--font-display);font-size:18px;font-weight:600;margin-bottom:12px;color:var(--ink)}
 .detail-card p{font-size:15px;color:var(--ink-soft);line-height:1.8;margin-bottom:16px}
 .list-styled{list-style:none;padding:0}
@@ -55,7 +68,7 @@ main{padding-top:64px}
 .list-styled li:last-child{border-bottom:none}
 .list-styled li::before{content:"•";color:var(--primary);font-weight:700;font-size:18px;flex-shrink:0}
 .two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.challenge-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.challenge-card{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .challenge-card.problem{border-left:4px solid #EF4444}
 .challenge-card.solution{border-left:4px solid var(--primary)}
 .challenge-card h4{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--ink)}
@@ -63,12 +76,12 @@ main{padding-top:64px}
 .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px}
 .badge--problem{background:rgba(239,68,68,.1);color:#EF4444}
 .badge--solution{background:rgba(27,107,74,.1);color:var(--primary)}
-.quote-block{background:var(--surface);border-left:4px solid var(--primary);padding:24px 28px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:40px;box-shadow:var(--shadow)}
+.quote-block{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-left:4px solid var(--primary);padding:24px 28px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:40px;box-shadow:var(--shadow)}
 .quote-text{font-family:var(--font-display);font-size:17px;font-style:italic;color:var(--ink);line-height:1.8;margin-bottom:12px}
 .quote-author{font-size:14px;color:var(--ink-soft);font-weight:500}
-.philosophy-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center;margin-bottom:40px;box-shadow:var(--shadow)}
+.philosophy-card{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center;margin-bottom:40px;box-shadow:var(--shadow)}
 .philosophy-card p{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.3rem);font-style:italic;color:var(--ink);line-height:1.9}
-.footer{background:var(--surface);border-top:1px solid var(--line);padding:48px 2rem}
+.footer{background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:48px 2rem}
 .footer__inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin-bottom:32px}
 .footer__brand{display:flex;align-items:center;gap:16px}
 .footer__brand img{width:48px;height:48px;border-radius:10px}
@@ -87,11 +100,45 @@ main{padding-top:64px}
 @media(max-width:768px){.navbar__nav{display:none}.footer__inner{flex-direction:column;gap:24px}}
 @media(max-width:640px){.card-grid{grid-template-columns:1fr}.section{padding:60px 1.5rem}.flip-card-container{height:220px}}
 
+/* ======================= FLIP CARDS ======================= */
+.flip-card-container {perspective:1200px;height:260px;cursor:pointer}
+.flip-card{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;border-radius:24px}
+.flip-card-container:hover .flip-card,.flip-card-container:active .flip-card{transform:rotateY(180deg)}
+.flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;-webkit-backdrop-filter:blur(8px);border-radius:24px;padding:30px;display:flex;gap:20px;align-items:center;background:rgba(255,255,255,0.95)}
+.flip-card-front{border:2px solid #ef4444}
+.flip-card-back{background:rgba(240,255,244,0.95);border:2px solid #22c55e;transform:rotateY(180deg)}
+.card-number{position:absolute;top:15px;left:15px;width:40px;height:40px;background:#ef4444;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.flip-card-back .card-number{background:#22c55e}
+.card-icon{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:45px;flex-shrink:0}
+.flip-card-front .card-icon{background:#fff1f1}
+.flip-card-back .card-icon{background:#f0fff4}
+.card-info{flex:1}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
+.badge--problem{background:#fef2f2;color:#dc2626}
+.badge--solution{background:#f0fdf4;color:#15803d}
+.challenge-card{background:transparent;border:none;padding:0;height:auto;display:block}
+.challenge-card h4{font-family:var(--font-display);font-size:17px;font-weight:600;margin:10px 0;color:#1f2937;line-height:1.3}
+.challenge-card p{font-size:14px;color:#555;line-height:1.7;margin-bottom:0}
+.flip-indicator{position:absolute;bottom:15px;right:20px;font-size:12px;font-weight:600;opacity:.7}
+.flip-card-front .flip-indicator{color:#ef4444}
+.flip-card-back .flip-indicator{color:#22c55e}
+
+/* Theory Cards */
+.flip-card-container.theory{height:280px}
+.flip-card-container.theory .flip-card-front,.flip-card-container.theory .flip-card-back{background:linear-gradient(135deg,rgba(254,243,199,0.95),rgba(253,230,138,0.95));border-color:#f59e0b}
+.flip-card-container.theory .card-icon{background:rgba(245,158,11,.15);font-size:40px}
+.flip-card-container.theory .card-number{background:#f59e0b}
+.flip-card-container.theory .theory-badge{background:rgba(245,158,11,.2);color:#b45309;display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
+.flip-card-container.theory .challenge-card h4{color:#78350f;font-size:16px}
+.flip-card-container.theory .challenge-card p{color:#92400e;font-size:13px}
+.flip-card-container.theory .flip-indicator{color:#b45309}
+
 /* ======================= DARK MODE (Warm Brown Theme) ======================= */
 html[data-theme="dark"]{
   --bg:#1A140F;
   --bg-alt:#231A14;
-  --surface:#2E241C;
+  --surface:rgba(30,22,16,0.9);
+  --surface-light:rgba(30,22,16,0.7);
   --ink:#F5EDE0;
   --ink-soft:#C9B8A8;
   --primary:#C4804A;
@@ -101,7 +148,7 @@ html[data-theme="dark"]{
   color-scheme:dark
 }
 html[data-theme="dark"] body{background:url("Images/Body-Dark.png") center/cover fixed no-repeat,var(--bg)}
-html[data-theme="dark"] .navbar{background:rgba(20,14,10,.92);border-color:var(--line)}
+html[data-theme="dark"] .navbar{background:rgba(26,20,15,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
 html[data-theme="dark"] .navbar__name{color:var(--ink)}
 html[data-theme="dark"] .navbar__role{color:var(--ink-soft)}
 html[data-theme="dark"] .navbar__logo{background:rgba(30,22,16,.5)}
@@ -118,7 +165,7 @@ html[data-theme="dark"] .hero__lede{color:var(--ink-soft)}
 html[data-theme="dark"] .eyebrow{color:var(--primary);background:rgba(196,128,74,.12);border-color:rgba(196,128,74,.25)}
 html[data-theme="dark"] .hero__title-suffix{color:var(--primary)}
 html[data-theme="dark"] .card,html[data-theme="dark"] .detail-card,html[data-theme="dark"] .challenge-card,html[data-theme="dark"] .quote-block,html[data-theme="dark"] .philosophy-card,html[data-theme="dark"] .footer{
-  background:var(--surface);border-color:var(--line)
+  background:var(--surface);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:var(--line)
 }
 html[data-theme="dark"] .card:hover{box-shadow:var(--shadow)}
 html[data-theme="dark"] .card:nth-child(1) .card-icon{background:rgba(196,128,74,.15)}
@@ -135,31 +182,9 @@ html[data-theme="dark"] .footer__brand p,html[data-theme="dark"] .footer__nav a,
 html[data-theme="dark"] .footer__nav a:hover{color:var(--primary)}
 html[data-theme="dark"] .back-to-top-float{background:var(--primary);box-shadow:0 4px 12px rgba(196,128,74,.3)}
 html[data-theme="dark"] .back-to-top-float svg{color:#fff}
-.icon-btn svg{width:18px;height:18px;color:inherit}
 
-/* ======================= FLIP CARDS ======================= */
-.flip-card-container {perspective:1200px;height:260px;cursor:pointer}
-.flip-card{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;border-radius:24px}
-.flip-card-container:hover .flip-card,.flip-card-container:active .flip-card{transform:rotateY(180deg)}
-.flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:24px;padding:30px;display:flex;gap:20px;align-items:center}
-.flip-card-front{background:#fff5f5;border:2px solid #ef4444}
-.flip-card-back{background:#f0fff4;border:2px solid #22c55e;transform:rotateY(180deg)}
-.card-number{position:absolute;top:15px;left:15px;width:40px;height:40px;background:#ef4444;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
-.flip-card-back .card-number{background:#22c55e}
-.card-icon{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:45px;flex-shrink:0}
-.flip-card-front .card-icon{background:#fff1f1}
-.flip-card-back .card-icon{background:#f0fff4}
-.card-info{flex:1}
-.badge{display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
-.badge--problem{background:#fef2f2;color:#dc2626}
-.badge--solution{background:#f0fdf4;color:#15803d}
-.challenge-card{background:transparent;border:none;padding:0;height:auto;display:block}
-.challenge-card h4{font-family:var(--font-display);font-size:17px;font-weight:600;margin:10px 0;color:#1f2937;line-height:1.3}
-.challenge-card p{font-size:14px;color:#555;line-height:1.7;margin-bottom:0}
-.flip-indicator{position:absolute;bottom:15px;right:20px;font-size:12px;font-weight:600;opacity:.7}
-.flip-card-front .flip-indicator{color:#ef4444}
-.flip-card-back .flip-indicator{color:#22c55e}
-html[data-theme="dark"] .flip-card-front,html[data-theme="dark"] .flip-card-back{background:rgba(30,22,16,.95);border-color:rgba(255,255,255,.1)}
+/* Dark Mode - Flip Cards */
+html[data-theme="dark"] .flip-card-front,html[data-theme="dark"] .flip-card-back{background:rgba(30,22,16,0.95);border-color:rgba(255,255,255,.1)}
 html[data-theme="dark"] .flip-card-front .card-icon{background:rgba(239,68,68,.15)}
 html[data-theme="dark"] .flip-card-back .card-icon{background:rgba(34,197,94,.15)}
 html[data-theme="dark"] .card-number{background:var(--primary)}
@@ -170,17 +195,7 @@ html[data-theme="dark"] .challenge-card h4{color:var(--ink)}
 html[data-theme="dark"] .challenge-card p{color:var(--ink-soft)}
 html[data-theme="dark"] .flip-card-front .flip-indicator{color:#F87171}
 html[data-theme="dark"] .flip-card-back .flip-indicator{color:#4ADE80}
-
-/* Theory Cards */
-.flip-card-container.theory{height:280px}
-.flip-card-container.theory .flip-card-front,.flip-card-container.theory .flip-card-back{background:linear-gradient(135deg,#fef3c7,#fde68a);border-color:#f59e0b}
-.flip-card-container.theory .card-icon{background:rgba(245,158,11,.15);font-size:40px}
-.flip-card-container.theory .card-number{background:#f59e0b}
-.flip-card-container.theory .theory-badge{background:rgba(245,158,11,.2);color:#b45309;display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
-.flip-card-container.theory .challenge-card h4{color:#78350f;font-size:16px}
-.flip-card-container.theory .challenge-card p{color:#92400e;font-size:13px}
-.flip-card-container.theory .flip-indicator{color:#b45309}
-html[data-theme="dark"] .flip-card-container.theory .flip-card-front,html[data-theme="dark"] .flip-card-container.theory .flip-card-back{background:rgba(30,22,16,.95);border-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] .flip-card-container.theory .flip-card-front,html[data-theme="dark"] .flip-card-container.theory .flip-card-back{background:rgba(30,22,16,0.95);border-color:rgba(255,255,255,.1)}
 html[data-theme="dark"] .flip-card-container.theory .card-icon{background:rgba(245,158,11,.15)}
 html[data-theme="dark"] .flip-card-container.theory .card-number{background:var(--primary)}
 html[data-theme="dark"] .flip-card-container.theory .theory-badge{background:rgba(245,158,11,.15);color:var(--accent)}
