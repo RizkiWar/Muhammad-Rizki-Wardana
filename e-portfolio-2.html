@@ -10,30 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
+/* ======================= LIGHT MODE (Default) ======================= */
 :root{--bg:#FAFBFC;--bg-alt:#F0F2F5;--surface:#fff;--ink:#1A1F2E;--ink-soft:#5A6378;--primary:#1B6B4A;--accent:#3B82F6;--line:rgba(26,31,46,.08);--shadow:0 16px 40px -24px rgba(26,31,46,.15);--radius:16px;--radius-sm:8px;--font-display:Fraunces,serif;--font-body:"Plus Jakarta Sans",sans-serif;color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:url("Images/Background-Porto.png") center/cover fixed no-repeat,var(--bg);color:var(--ink);line-height:1.7;font-size:16px;min-height:100vh}
-html[data-theme="dark"] body{background:url("Images/Body-Dark.png") center/cover fixed no-repeat!important}
-.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,251,252,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:64px}
-.navbar__inner{max-width:1120px;margin:0 auto;padding:0 2rem;height:100%;display:flex;align-items:center;justify-content:space-between}
-.navbar__brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.navbar__logo{width:36px;height:36px;border-radius:8px;object-fit:contain}
-.navbar__name{font-size:15px;font-weight:600;line-height:1.3}
-.navbar__role{font-weight:400;color:var(--ink-soft);font-size:13px}
-.navbar__nav{display:flex;align-items:center;gap:4px}
-.navbar__nav a{padding:8px 14px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;color:var(--ink-soft);text-decoration:none;transition:color .2s,background .2s}
-.navbar__nav a:hover{color:var(--ink);background:var(--bg-alt)}
-.navbar__nav a.active{color:var(--primary);font-weight:600}
-.navbar__actions{display:flex;align-items:center;gap:8px}
-.icon-btn{width:38px;height:38px;border-radius:8px;background:var(--bg-alt);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink-soft);transition:color .2s,background .2s}
-.icon-btn:hover{color:var(--ink);background:var(--surface)}
 main{padding-top:64px}
 .hero{position:relative;padding:80px 2rem 60px;text-align:center;border-bottom:1px solid var(--line);overflow:hidden}
 .hero__bg{position:absolute;inset:0;z-index:0}
 .hero__bg-image{width:100%;height:100%;object-fit:cover;opacity:.06}
 .hero__bg-overlay{position:absolute;inset:0;background:transparent}
-html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .hero__inner{position:relative;z-index:1;max-width:800px;margin:0 auto}
 .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);background:rgba(27,107,74,.08);border:1px solid rgba(27,107,74,.2);padding:6px 16px;border-radius:100px;margin-bottom:24px}
 .hero__title{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.5rem);font-weight:700;line-height:1.15;margin-bottom:20px;color:var(--ink)}
@@ -46,7 +31,7 @@ html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .section__title{font-family:var(--font-display);font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--ink);margin-bottom:12px}
 .section__lede{font-size:16px;color:var(--ink-soft);max-width:700px;margin:0 auto;line-height:1.75}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s,box-shadow .3s}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s,box-shadow .3s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .card h4{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--ink)}
 .card p{font-size:14px;color:var(--ink-soft);line-height:1.65}
@@ -57,7 +42,7 @@ html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .card:nth-child(4) .card-icon{background:rgba(245,158,11,.1)}
 .card:nth-child(5) .card-icon{background:rgba(139,92,246,.1)}
 .card:nth-child(6) .card-icon{background:rgba(236,72,153,.1)}
-.detail-card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.detail-card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
 .detail-card h3{font-family:var(--font-display);font-size:18px;font-weight:600;margin-bottom:12px;color:var(--ink)}
 .detail-card p{font-size:15px;color:var(--ink-soft);line-height:1.8;margin-bottom:16px}
 .list-styled{list-style:none;padding:0}
@@ -65,7 +50,7 @@ html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .list-styled li:last-child{border-bottom:none}
 .list-styled li::before{content:"•";color:var(--primary);font-weight:700;font-size:18px;flex-shrink:0}
 .two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.challenge-card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.challenge-card{border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .challenge-card.problem{border-left:4px solid #EF4444}
 .challenge-card.solution{border-left:4px solid var(--primary)}
 .challenge-card h4{font-family:var(--font-display);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--ink)}
@@ -73,12 +58,12 @@ html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px}
 .badge--problem{background:rgba(239,68,68,.1);color:#EF4444}
 .badge--solution{background:rgba(27,107,74,.1);color:var(--primary)}
-.quote-block{border-left:4px solid var(--primary);padding:24px 28px;background:rgba(255,255,255,.9);border-radius:0 var(--radius) var(--radius) 0;margin-bottom:40px;box-shadow:var(--shadow)}
+.quote-block{border-left:4px solid var(--primary);padding:24px 28px;border-radius:0 var(--radius) var(--radius) 0;margin-bottom:40px;box-shadow:var(--shadow)}
 .quote-text{font-family:var(--font-display);font-size:17px;font-style:italic;color:var(--ink);line-height:1.8;margin-bottom:12px}
 .quote-author{font-size:14px;color:var(--ink-soft);font-weight:500}
-.philosophy-card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center;margin-bottom:40px;box-shadow:var(--shadow)}
+.philosophy-card{border:1px solid var(--line);border-radius:var(--radius);padding:40px;text-align:center;margin-bottom:40px;box-shadow:var(--shadow)}
 .philosophy-card p{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.3rem);font-style:italic;color:var(--ink);line-height:1.9}
-.footer{background:rgba(240,242,245,.9);border-top:1px solid var(--line);padding:48px 2rem}
+.footer{border-top:1px solid var(--line);padding:48px 2rem}
 .footer__inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin-bottom:32px}
 .footer__brand{display:flex;align-items:center;gap:16px}
 .footer__brand img{width:48px;height:48px;border-radius:10px}
@@ -93,253 +78,106 @@ html[data-theme="dark"] .hero__bg-overlay{background:transparent}
 .back-to-top-float:hover{transform:translateY(-2px)}
 .back-to-top-float svg{width:20px;height:20px}
 .divider{border:none;border-top:1px solid var(--line)}
-/* Dark Mode - Brown Theme */
-html[data-theme="dark"]{--bg:#1A140F;--bg-alt:#231A14;--surface:#2E241C;--ink:#F5EDE0;--ink-soft:#C9B8A8;--primary:#C4804A;--accent:#D4A84B;--line:rgba(255,255,255,.08);--shadow:0 16px 40px -24px rgba(0,0,0,.5)}
-html[data-theme="dark"] .navbar{background:rgba(20,14,10,.92)}
-html[data-theme="dark"] .card,html[data-theme="dark"] .detail-card,html[data-theme="dark"] .challenge-card,html[data-theme="dark"] .quote-block,html[data-theme="dark"] .philosophy-card{border-color:rgba(255,255,255,.08)}
-html[data-theme="dark"] .footer{background:rgba(20,14,10,.92)}
-html[data-theme="dark"] .section--alt{background:transparent}
-html[data-theme="dark"] .badge--problem{background:rgba(239,68,68,.2);color:#EF4444}
-html[data-theme="dark"] .badge--solution{background:rgba(196,128,74,.2);color:#C4804A}
-html[data-theme="dark"] .back-to-top-float{background:#C4804A}
-html[data-theme="dark"] .back-to-top-float svg{color:#fff}
-html[data-theme="dark"] .card:nth-child(1) .card-icon{background:rgba(196,128,74,.15)}
-html[data-theme="dark"] .card:nth-child(2) .card-icon{background:rgba(212,168,75,.15)}
-html[data-theme="dark"] .card:nth-child(3) .card-icon{background:rgba(196,128,74,.15)}
-html[data-theme="dark"] .card:nth-child(4) .card-icon{background:rgba(212,168,75,.15)}
-html[data-theme="dark"] .card:nth-child(5) .card-icon{background:rgba(196,128,74,.15)}
-html[data-theme="dark"] .card:nth-child(6) .card-icon{background:rgba(212,168,75,.15)}
 @media(max-width:900px){.card-grid{grid-template-columns:repeat(2,1fr)}.two-col-grid{grid-template-columns:1fr}}
 @media(max-width:768px){.navbar__nav{display:none}.footer__inner{flex-direction:column;gap:24px}}
 @media(max-width:640px){.card-grid{grid-template-columns:1fr}.section{padding:60px 1.5rem}.flip-card-container{height:220px}}
-/* Flip Card Animation - Modern Style */
-.flip-card-container {
-  perspective: 1200px;
-  height: 260px;
-  cursor: pointer;
-}
-.flip-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transform-style: preserve-3d;
-  border-radius: 24px;
-}
-.flip-card-container:hover .flip-card,
-.flip-card-container:active .flip-card {
-  transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 24px;
-  padding: 30px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-.flip-card-front {
-  background: #fff5f5;border: 2px solid #ef4444;
-}
-.flip-card-back {
-  background: #f0fff4;border: 2px solid #22c55e;
-  transform: rotateY(180deg);
-}
-.card-number {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 40px;
-  height: 40px;
-  background: #ef4444;
-  color: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 14px;
-}
-.flip-card-back .card-number {
-  background: #22c55e;
-}
-.card-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  flex-shrink: 0;
-}
-.flip-card-front .card-icon {
-  background: #fff1f1;
-}
-.flip-card-back .card-icon {
-  background: #f0fff4;
-}
-.card-info {
-  flex: 1;
-}
-.badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-weight: bold;
-  font-size: 10px;
-}
-.badge--problem {
-  background: #fef2f2;
-  color: #dc2626;
-}
-.badge--solution {
-  background: #f0fdf4;
-  color: #15803d;
-}
-.challenge-card {
-  background: transparent;
-  border: none;
-  padding: 0;
-  height: auto;
-  display: block;
-}
-.challenge-card h4 {
-  font-family: var(--font-display);
-  font-size: 17px;
-  font-weight: 600;
-  margin: 10px 0;
-  color: #1f2937;
-  line-height: 1.3;
-}
-.challenge-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-.flip-indicator {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  opacity: 0.7;
-}
-.flip-card-front .flip-indicator {
-  color: #ef4444;
-}
-.flip-card-back .flip-indicator {
-  color: #22c55e;
-}
-/* Dark mode */
-html[data-theme="dark"] .flip-card-front,
-html[data-theme="dark"] .flip-card-back {
-  background: rgba(30, 22, 16, 0.6);
-  border-color: #5D4037;
-}
-html[data-theme="dark"] .flip-card-front .card-icon {
-  background: rgba(239, 68, 68, 0.2);
-}
-html[data-theme="dark"] .flip-card-back .card-icon {
-  background: rgba(34, 197, 94, 0.2);
-}
-html[data-theme="dark"] .card-number {
-  background: #C4804A;
-}
-html[data-theme="dark"] .flip-card-back .card-number {
-  background: #C4804A;
-}
-html[data-theme="dark"] .badge--problem {
-  background: rgba(239, 68, 68, 0.25);
-  color: #F87171;
-}
-html[data-theme="dark"] .badge--solution {
-  background: rgba(34, 197, 94, 0.25);
-  color: #4ADE80;
-}
-html[data-theme="dark"] .challenge-card h4 {
-  color: #F5EDE0;
-}
-html[data-theme="dark"] .challenge-card p {
-  color: #C9B8A8;
-}
-html[data-theme="dark"] .flip-card-front .flip-indicator {
-  color: #F87171;
-}
-html[data-theme="dark"] .flip-card-back .flip-indicator {
-  color: #4ADE80;
-}
 
-/* Theory Card - Education Theories */
-.flip-card-container.theory {
-  perspective: 1200px;
-  height: 280px;
+/* ======================= DARK MODE ======================= */
+html[data-theme="dark"]{
+  --bg:#0F1219;
+  --bg-alt:#161B26;
+  --surface:#1E2433;
+  --ink:#F1F3F7;
+  --ink-soft:#9CA3B8;
+  --primary:#3B82F6;
+  --accent:#10B981;
+  --line:rgba(255,255,255,.08);
+  --shadow:0 16px 40px -24px rgba(0,0,0,.4);
+  color-scheme:dark
 }
-.flip-card-container.theory .flip-card-front {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border-color: #f59e0b;
+html[data-theme="dark"] body{background:url("Images/Body-Dark.png") center/cover fixed no-repeat,var(--bg)}
+html[data-theme="dark"] .navbar{background:rgba(15,18,25,.92);border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .navbar__brand{color:var(--ink)}
+html[data-theme="dark"] .navbar__name{color:var(--ink)}
+html[data-theme="dark"] .navbar__nav a{color:var(--ink-soft)}
+html[data-theme="dark"] .navbar__nav a:hover{color:var(--ink);background:var(--bg-alt)}
+html[data-theme="dark"] .navbar__nav a.active{color:var(--primary)}
+html[data-theme="dark"] .icon-btn{background:var(--bg-alt);border-color:var(--line);color:var(--ink-soft)}
+html[data-theme="dark"] .icon-btn:hover{background:var(--surface);color:var(--ink)}
+html[data-theme="dark"] .hero{border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .hero__title{color:var(--ink)}
+html[data-theme="dark"] .hero__lede{color:var(--ink-soft)}
+html[data-theme="dark"] .eyebrow{color:var(--primary);background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.25)}
+html[data-theme="dark"] .hero__title-suffix{color:var(--primary)}
+html[data-theme="dark"] .card,html[data-theme="dark"] .detail-card,html[data-theme="dark"] .challenge-card,html[data-theme="dark"] .quote-block,html[data-theme="dark"] .philosophy-card{
+  background:rgba(30,36,51,.9);border-color:rgba(255,255,255,.08)
 }
-.flip-card-container.theory .flip-card-back {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  border-color: #f59e0b;
-  transform: rotateY(180deg);
-}
-.flip-card-container.theory .card-icon {
-  background: rgba(245, 158, 11, 0.15);
-  font-size: 40px;
-}
-.flip-card-container.theory .card-number {
-  background: #f59e0b;
-}
-.flip-card-container.theory .theory-badge {
-  background: rgba(245, 158, 11, 0.2);
-  color: #b45309;
-}
-.flip-card-container.theory .challenge-card h4 {
-  color: #78350f;
-  font-size: 16px;
-}
-.flip-card-container.theory .challenge-card p {
-  color: #92400e;
-  font-size: 13px;
-}
-.flip-card-container.theory .flip-indicator {
-  color: #b45309;
-}
-/* Dark mode theory cards */
-html[data-theme="dark"] .flip-card-container.theory .flip-card-front,
-html[data-theme="dark"] .flip-card-container.theory .flip-card-back {
-  background: transparent;
-  border-color: #5D4037;
-}
-html[data-theme="dark"] .flip-card-container.theory .card-icon {
-  background: rgba(245, 158, 11, 0.2);
-}
-html[data-theme="dark"] .flip-card-container.theory .card-number {
-  background: #C4804A;
-}
-html[data-theme="dark"] .flip-card-container.theory .theory-badge {
-  background: transparent;
-  color: #fcd34d;
-}
-html[data-theme="dark"] .flip-card-container.theory .challenge-card h4 {
-  background: transparent;
-  color: #F5EDE0;
-}
-html[data-theme="dark"] .flip-card-container.theory .challenge-card p {
-  background: transparent;
-  color: #C9B8A8;
-}
-html[data-theme="dark"] .flip-card-container.theory .flip-indicator {
-  background: transparent;
-  color: #C9B8A8;
-}
+html[data-theme="dark"] .card:hover{box-shadow:var(--shadow)}
+html[data-theme="dark"] .card:nth-child(1) .card-icon{background:rgba(59,130,246,.15)}
+html[data-theme="dark"] .card:nth-child(2) .card-icon{background:rgba(16,185,129,.15)}
+html[data-theme="dark"] .card:nth-child(3) .card-icon{background:rgba(59,130,246,.15)}
+html[data-theme="dark"] .card:nth-child(4) .card-icon{background:rgba(16,185,129,.15)}
+html[data-theme="dark"] .card:nth-child(5) .card-icon{background:rgba(59,130,246,.15)}
+html[data-theme="dark"] .card:nth-child(6) .card-icon{background:rgba(16,185,129,.15)}
+html[data-theme="dark"] .list-styled li{border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .list-styled li::before{color:var(--primary)}
+html[data-theme="dark"] .divider{border-color:rgba(255,255,255,.08)}
+html[data-theme="dark"] .footer{border-color:rgba(255,255,255,.08);background:rgba(15,18,25,.92)}
+html[data-theme="dark"] .footer__brand p,html[data-theme="dark"] .footer__nav a,html[data-theme="dark"] .footer__bottom p{color:var(--ink-soft)}
+html[data-theme="dark"] .footer__nav a:hover{color:var(--primary)}
+html[data-theme="dark"] .back-to-top-float{background:var(--primary);box-shadow:0 4px 12px rgba(59,130,246,.3)}
+html[data-theme="dark"] .back-to-top-float svg{color:#fff}
+
+/* ======================= FLIP CARDS ======================= */
+.flip-card-container {perspective:1200px;height:260px;cursor:pointer}
+.flip-card{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;border-radius:24px}
+.flip-card-container:hover .flip-card,.flip-card-container:active .flip-card{transform:rotateY(180deg)}
+.flip-card-front,.flip-card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:24px;padding:30px;display:flex;gap:20px;align-items:center}
+.flip-card-front{background:#fff5f5;border:2px solid #ef4444}
+.flip-card-back{background:#f0fff4;border:2px solid #22c55e;transform:rotateY(180deg)}
+.card-number{position:absolute;top:15px;left:15px;width:40px;height:40px;background:#ef4444;color:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.flip-card-back .card-number{background:#22c55e}
+.card-icon{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:45px;flex-shrink:0}
+.flip-card-front .card-icon{background:#fff1f1}
+.flip-card-back .card-icon{background:#f0fff4}
+.card-info{flex:1}
+.badge{display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
+.badge--problem{background:#fef2f2;color:#dc2626}
+.badge--solution{background:#f0fdf4;color:#15803d}
+.challenge-card{background:transparent;border:none;padding:0;height:auto;display:block}
+.challenge-card h4{font-family:var(--font-display);font-size:17px;font-weight:600;margin:10px 0;color:#1f2937;line-height:1.3}
+.challenge-card p{font-size:14px;color:#555;line-height:1.7;margin-bottom:0}
+.flip-indicator{position:absolute;bottom:15px;right:20px;font-size:12px;font-weight:600;opacity:.7}
+.flip-card-front .flip-indicator{color:#ef4444}
+.flip-card-back .flip-indicator{color:#22c55e}
+html[data-theme="dark"] .flip-card-front,html[data-theme="dark"] .flip-card-back{background:rgba(30,36,51,.95);border-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] .flip-card-front .card-icon{background:rgba(239,68,68,.15)}
+html[data-theme="dark"] .flip-card-back .card-icon{background:rgba(34,197,94,.15)}
+html[data-theme="dark"] .card-number{background:var(--primary)}
+html[data-theme="dark"] .flip-card-back .card-number{background:var(--primary)}
+html[data-theme="dark"] .badge--problem{background:rgba(239,68,68,.2);color:#F87171}
+html[data-theme="dark"] .badge--solution{background:rgba(34,197,94,.2);color:#4ADE80}
+html[data-theme="dark"] .challenge-card h4{color:var(--ink)}
+html[data-theme="dark"] .challenge-card p{color:var(--ink-soft)}
+html[data-theme="dark"] .flip-card-front .flip-indicator{color:#F87171}
+html[data-theme="dark"] .flip-card-back .flip-indicator{color:#4ADE80}
+
+/* Theory Cards */
+.flip-card-container.theory{height:280px}
+.flip-card-container.theory .flip-card-front,.flip-card-container.theory .flip-card-back{background:linear-gradient(135deg,#fef3c7,#fde68a);border-color:#f59e0b}
+.flip-card-container.theory .card-icon{background:rgba(245,158,11,.15);font-size:40px}
+.flip-card-container.theory .card-number{background:#f59e0b}
+.flip-card-container.theory .theory-badge{background:rgba(245,158,11,.2);color:#b45309;display:inline-block;padding:6px 14px;border-radius:999px;font-weight:700;font-size:10px;text-transform:uppercase}
+.flip-card-container.theory .challenge-card h4{color:#78350f;font-size:16px}
+.flip-card-container.theory .challenge-card p{color:#92400e;font-size:13px}
+.flip-card-container.theory .flip-indicator{color:#b45309}
+html[data-theme="dark"] .flip-card-container.theory .flip-card-front,html[data-theme="dark"] .flip-card-container.theory .flip-card-back{background:rgba(30,36,51,.95);border-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] .flip-card-container.theory .card-icon{background:rgba(245,158,11,.15)}
+html[data-theme="dark"] .flip-card-container.theory .card-number{background:var(--primary)}
+html[data-theme="dark"] .flip-card-container.theory .theory-badge{background:rgba(245,158,11,.15);color:#fcd34d}
+html[data-theme="dark"] .flip-card-container.theory .challenge-card h4{color:var(--ink)}
+html[data-theme="dark"] .flip-card-container.theory .challenge-card p{color:var(--ink-soft)}
+html[data-theme="dark"] .flip-card-container.theory .flip-indicator{color:var(--ink-soft)}
 </style>
 </head>
 <body>
