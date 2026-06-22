@@ -1,2 +1,0 @@
-# Catatan: tidak pakai SPA fallback agar custom 404.html bisa muncul
-# untuk URL yang tidak ditemukan.

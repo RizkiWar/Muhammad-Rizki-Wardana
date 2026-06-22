@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E-Portfolio 1 | Muhammad Rizki Wardana, S.Pd. — Desain Modern</title>
+<meta name="description" content="E-Portfolio PPL Terbimbing PPG Prajabatan PGSD — Desain Modern Minimalis dengan WebAR" />
+<meta name="theme-color" content="#1B6B4A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+<style>
+/* =================== E-Portfolio 1 Theme - Modern Minimalis =================== */
+:root {
+  /* Color tokens - Modern Clean Palette */
+  --color-bg: #FAFBFC;
+  --color-bg-alt: #F0F2F5;
+  --color-surface: #FFFFFF;
+  --color-ink: #1A1F2E;
+  --color-ink-soft: #5A6378;
+  --color-primary: #1B6B4A;
+  --color-primary-dark: #0F4A32;
+  --color-accent: #3B82F6;
+  --color-accent-light: #60A5FA;
+  --color-success: #10B981;
+  --color-line: rgba(26, 31, 46, 0.08);
+  --shadow-soft: 0 16px 40px -24px rgba(26, 31, 46, 0.15);
+
+  /* Type */
+  --font-display: "Fraunces", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --container: 1120px;
+  --radius: 16px;
+  --radius-sm: 8px;
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0F1219;
+  --color-bg-alt: #161B26;
+  --color-surface: #1E2433;
+  --color-ink: #F1F3F7;
+  --color-ink-soft: #9CA3B8;
+  --color-primary: #3B82F6;
+  --color-primary-dark: #2563EB;
+  --color-accent: #10B981;
+  --color-accent-light: #34D399;
+  --color-success: #34D399;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --shadow-soft: 0 16px 40px -24px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+/* Override landing page styles for portfolio pages */
+.landing { display: none; }
+</style>
+</head>
+<body class="portfolio-page">
+
+<!-- Decorative minimal strip -->
+<div class="minimal-strip" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#hero" class="navbar__brand">
+      <img src="images/Logo UNIKA.png" alt="Logo UNIKA" class="navbar__logo" />
+      <span class="navbar__name">Muhammad Rizki Wardana <br> <span class="navbar__role">· E-Portfolio 1</span></span>
+    </a>
+
+    <nav class="navbar__nav" id="primary-nav">
+      <a href="#hero">Beranda</a>
+      <a href="#profil">Profil</a>
+      <a href="#model-guru">Model Guru</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#artefak">Artefak</a>
+      <a href="#analisis">Analisis</a>
+      <a href="#penilaian">Penilaian</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="index.html" class="btn btn--back" title="Kembali ke Landing" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </a>
+      <button id="theme-toggle" class="icon-btn" aria-label="Ganti tema gelap/terang" title="Ganti tema">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero hero--modern">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="images/Background-Header.png" alt="" class="hero__bg-image" data-dark="images/Hero Dark.png" data-light="images/Background-Header.png" />
+    <div class="hero__bg-overlay"></div>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__text reveal">
+      <p class="eyebrow eyebrow--modern">👋 Halo, Saya</p>
+      <h1 class="hero__title">
+        Muhammad Rizki<br>
+        Wardana<span class="hero__title-suffix">, S.Pd.</span>
+      </h1>
+      <p class="hero__lede">
+        Saya adalah calon guru profesional bidang <strong>PGSD</strong> yang berkomitmen menghadirkan pengalaman belajar yang bermakna, kontekstual, dan menyenangkan bagi peserta didik. Dengan keahlian dalam pengembangan pembelajaran berbasis digital, saya selalu berinovasi menciptakan suasana belajar yang aktif, kreatif, dan sesuai dengan kebutuhan peserta didik di era digital.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#profil" class="btn btn--primary btn--modern">Lihat Profil</a>
+        <a href="#kontak" class="btn btn--ghost btn--ghost-modern">Hubungi Saya</a>
+      </div>
+
+      <div class="hero__chips">
+        <span class="chip">🎓 PPG Prajabatan 2026</span>
+        <span class="chip">🏫 PGSD — SD Negeri 067241</span>
+        <span class="chip">📍 Aceh Tamiang</span>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal" style="--delay:120ms">
+      <div class="profile-showcase">
+        <div class="profile-ring"></div>
+        <div class="profile-ring-2"></div>
+        <img src="images/Profil.png" alt="Foto Profil Muhammad Rizki Wardana" class="profile-image" />
+
+        <div class="float-badge badge-1">
+          <div class="icon-box">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <span>PGSD</span>
+        </div>
+        <div class="float-badge badge-2">
+          <div class="icon-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <span>PPG Prajabatan</span>
+        </div>
+        <div class="float-badge badge-3">
+          <div class="icon-box">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <span>UPT SD 067241</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#profil" class="scroll-cue" aria-label="Gulir ke bawah">
+    <span>Gulir</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ============ PROFIL ============ -->
+<section id="profil" class="section">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Profil Mahasiswa ✦</p>
+    <h2 class="section__title">E-Portfolio 1 — PPL Terbimbing PPG Prajabatan</h2>
+  </div>
+
+  <!-- A. Identitas Mahasiswa (Tabel) -->
+  <div class="narrative reveal">
+    <article class="narrative__block">
+      <h3>A. Identitas Mahasiswa</h3>
+      <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+        <!-- Photo Card -->
+        <div style="flex-shrink: 0;">
+          <div style="width: 400px; height: 270px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(26, 31, 46, 0.12); border: 2px solid var(--color-line);">
+            <img src="images/Profil-1.jpeg" alt="Foto Profil Muhammad Rizki Wardana" style="width: 100%; height: 100%; display: block; aspect-ratio: 1;" />
+          </div>
+          <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--color-ink-soft); font-weight: 500;">Muhammad Rizki Wardana, S.Pd.</p>
+        </div>
+        <!-- Identity Table -->
+        <div style="flex: 1; min-width: 300px;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background: var(--color-bg-alt);">
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600; width: 40%;">Nama</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">Muhammad Rizki Wardana, S.Pd.</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Asal Daerah</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">Aceh Tamiang, Aceh</td>
+            </tr>
+            <tr style="background: var(--color-bg-alt);">
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Program Studi</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">Pendidikan Guru Sekolah Dasar (PGSD)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Program</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">PPG Prajabatan</td>
+            </tr>
+            <tr style="background: var(--color-bg-alt);">
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Perguruan Tinggi</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">Universitas Katolik Santo Thomas, Medan</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Sekolah Praktik</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">UPT SD Negeri 067241 Medan</td>
+            </tr>
+            <tr style="background: var(--color-bg-alt);">
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem; font-weight: 600;">Pendidikan S1</td>
+              <td style="border: 1px solid var(--color-line); padding: 0.75rem;">S1 PGSD — Universitas Samudra</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- B. Narasi Profil Mahasiswa -->
+  <div class="narrative reveal">
+    <article class="narrative__block">
+      <h3>B. Narasi Profil Mahasiswa</h3>
+    </article>
+
+    <!-- Profil Mahasiswa -->
+    <article class="narrative__block">
+      <h4 style="font-size: 1.15rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Profil Mahasiswa</h4>
+      <p>Saya, Muhammad Rizki Wardana, S.Pd., berasal dari Aceh Tamiang — sebuah kabupaten di ujung selatan Provinsi Aceh yang kaya akan keanekaragaman budaya dan kearifan lokal. Aceh Tamiang dikenal sebagai daerah yang unik karena berada di persimpangan budaya Aceh dan Melayu, membentuk masyarakat yang toleran, ramah, dan menjunjung tinggi nilai-nilai pendidikan. Dari lingkungan inilah saya tumbuh dan belajar bahwa pendidikan adalah jembatan utama menuju perubahan yang bermakna bagi masyarakat.</p>
+      <p>Keberagaman budaya di Aceh Tamiang menanamkan dalam diri saya rasa empati, kepekaan terhadap keberagaman, dan semangat untuk terus belajar. Nilai-nilai tersebut menjadi fondasi penting ketika saya memutuskan untuk menempuh jalan sebagai seorang pendidik — profesi yang saya yakini mampu membawa perubahan positif bagi generasi penerus bangsa.</p>
+    </article>
+
+    <!-- Inspirasi Menjadi Guru Profesional -->
+    <article class="narrative__block">
+      <h4 style="font-size: 1.15rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Inspirasi Menjadi Guru Profesional</h4>
+      <p>Inspirasi terbesar saya untuk menjadi guru berasal dari sosok guru-guru saya di kampung halaman yang penuh dedikasi dan kecintaan terhadap profesinya. Di tengah keterbatasan fasilitas, mereka mampu menyalakan semangat belajar siswa dengan cara yang kreatif dan penuh kasih sayang. Dari merekalah saya memahami bahwa mengajar bukan sekadar menyampaikan ilmu, tetapi juga mendidik karakter dan membentuk masa depan.</p>
+      <p>Setelah menyelesaikan pendidikan S1 PGSD di Universitas Samudra, saya melanjutkan perjalanan akademik melalui Program PPG Prajabatan di Universitas Katolik Santo Thomas Medan. Selama menjalani PPL Terbimbing di UPT SD Negeri 067241 Medan, saya merancang media pembelajaran berbasis WebAR untuk mata pelajaran IPAS Kelas VI tema Kebudayaan Daerahku dalam kerangka Kurikulum Merdeka.</p>
+    </article>
+
+    <!-- Tujuan Menjadi Guru yang Profesional -->
+    <article class="narrative__block">
+      <h4 style="font-size: 1.15rem; margin-top: 0.5rem; margin-bottom: 0.8rem;">Tujuan Menjadi Guru yang Profesional</h4>
+      <p>Tujuan utama saya adalah menjadi guru SD yang profesional, inovatif, dan berpusat pada peserta didik. Saya ingin menciptakan lingkungan belajar yang inklusif, menyenangkan, dan bermakna — di mana setiap siswa merasa dihargai, termotivasi, dan mampu berkembang sesuai potensinya.</p>
+      <blockquote style="border-left: 4px solid var(--color-primary); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: var(--color-ink-soft);">
+        <p>"Guru yang baik bukan hanya yang mampu mengajar, tetapi yang mampu menginspirasi setiap anak untuk percaya bahwa mereka mampu belajar dan berkembang."</p>
+        <p style="margin-top: 0.5rem; font-weight: 600;">— Muhammad Rizki Wardana, S.Pd.</p>
+      </blockquote>
+    </article>
+  </div>
+</section>
+
+<section id="asal-daerah" class="section section--alt">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Kebudayaan Lokal ✦</p>
+    <h2 class="section__title">Asal dan Keunikan Daerah</h2>
+    <p class="section__lede">Mengenal Aceh Tamiang sebagai daerah yang kaya akan budaya, tradisi, dan kearifan lokal yang menjadi inspirasi dalam pengembangan pembelajaran kontekstual.</p>
+  </div>
+
+  <!-- 📍 Informasi Daerah -->
+  <div class="daerah-wrapper">
+    <div class="daerah-map-card">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d509313.2032683317!2d97.67175983269134!3d4.2184248126904285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303770355159fa5d%3A0x3039d80b220cd20!2sKabupaten%20Aceh%20Tamiang%2C%20Aceh!5e0!3m2!1sid!2sid!4v1781690086922!5m2!1sid!2sid" title="Peta Aceh Tamiang" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="daerah-info-card">
+      <h3>🏔️ Aceh Tamiang</h3>
+      <p class="daerah-desc">
+        Kabupaten Aceh Tamiang adalah sebuah daerah di Provinsi Aceh yang terletak di ujung timur Provinsi Aceh. Kabupaten ini memiliki luas wilayah sekitar 1.956,72 km² dengan populasi yang beragam etnis dan budaya.
+      </p>
+      <div class="daerah-details">
+        <div class="daerah-item">
+          <span class="daerah-label">📍 Lokasi</span>
+          <span class="daerah-value">Provinsi Aceh, Indonesia</span>
+        </div>
+        <div class="daerah-item">
+          <span class="daerah-label">🗣️ Bahasa Daerah</span>
+          <span class="daerah-value">Bahasa Melayu Tamiang</span>
+        </div>
+        <div class="daerah-item">
+          <span class="daerah-label">🏛️ Budaya</span>
+          <span class="daerah-value">Perpaduan budaya Melayu dan Aceh</span>
+        </div>
+        <div class="daerah-item">
+          <span class="daerah-label">🌾 Potensi Daerah</span>
+          <span class="daerah-value">Pertanian, perkebunan kelapa sawit, perikanan, dan wisata budaya</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎭 Galeri Budaya Aceh Tamiang -->
+  <div class="narrative reveal">
+    <article class="narrative__block">
+      <h3 style="font-size: 1.15rem; margin-top: 2rem; margin-bottom: 1rem;">🎭 Galeri Budaya Aceh</h3>
+    </article>
+  </div>
+
+  <div class="card-grid card-grid--4 reveal">
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Tari Saman.webp" alt="Tari Saman" />
+      <h4>Tari Saman</h4>
+      <p>Tarian sacramental yang berasal dari Gayo, Aceh. Dikenal dengan gerakan yang dinamis, kompak, dan penuh kekhidmatan. Tarian ini telah diakui UNESCO sebagai Warisan Budaya Tak Benda Manusia.</p>
+    </article>
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Meukasah.jpg" alt="Meukasah" />
+      <h4>Meukasah</h4>
+      <p>Pakaian adat tradisional Aceh yang anggun dan penuh keagungan. Digunakan dalam upacara adat dan peristiwa penting sebagai simbol identitas dan kebanggaan masyarakat Aceh.</p>
+    </article>
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Kue Marke.webp" alt="Kue Marke" />
+      <h4>Kue Marke</h4>
+      <p>Kue tradisional khas Aceh berbahan dasar tepung beras dan kelapa yang dibalut dengan gula merah. Kue ini menjadi simbol kelezatan kuliner dan tradisi masyarakat Aceh.</p>
+    </article>
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Rencong.webp" alt="Rencong" />
+      <h4>Rencong</h4>
+      <p>Senjata tradisional khas Aceh berbentuk seperti huruf Allah dalam aksara Arab-Jawi. Rencong melambangkan keberanian, ketangguhan, dan semangat perjuangan rakyat Aceh.</p>
+    </article>
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Krong Bade.jpg" alt="Krong Bade" />
+      <h4>Krong Bade</h4>
+      <p>Rumah tradisional Aceh yang megah dengan atap bergaya joglo. Krong Bade memiliki nilai filosofis tinggi dan menjadi simbol kebesaran budaya serta kearifan lokal masyarakat Aceh.</p>
+    </article>
+    <article class="competency-card competency-card--modern">
+      <img class="gallery-photo" src="images/Serune Kalee.webp" alt="Serune Kalee" />
+      <h4>Serune Kalee</h4>
+      <p>Alat musik tiup khas Aceh terbuat dari bambu dengan suara yang khas dan merdu. Serune Kalee sering dimainkan dalam acara adat, upacara tradisional, dan pertunjukan budaya.</p>
+    </article>
+  </div>
+
+  <!-- 💡 Refleksi Diri -->
+  <div class="misi-card misi-card--modern reveal">
+    <h3>💡 Refleksi Diri</h3>
+    <p style="font-style: italic;">Tumbuh di lingkungan yang kaya akan budaya lokal memberikan pemahaman bahwa pembelajaran akan lebih bermakna apabila dikaitkan dengan kehidupan peserta didik. Oleh karena itu, saya mengembangkan media pembelajaran WebAR pada materi Kebudayaan Daerahku untuk membantu peserta didik mengenal budaya lokal secara interaktif, menarik, dan relevan dengan perkembangan teknologi.</p>
+  </div>
+</section>
+
+<!-- ============ MODEL GURU ============ -->
+<section id="model-guru" class="section section--alt">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Model Guru yang Dituju ✦</p>
+    <h2 class="section__title">Misi, Kompetensi & Karakter</h2>
+    <p class="section__lede">Arah pengembangan diri saya sebagai pendidik Sekolah Dasar yang berpusat pada peserta didik.</p>
+  </div>
+
+  <div class="misi-card misi-card--modern reveal">
+    <h3>Misi Sebagai Guru</h3>
+    <p>Misi saya adalah menjadi fasilitator pembelajaran yang mampu membangun lingkungan kelas yang aman, inklusif, dan berpusat pada peserta didik.</p>
+  </div>
+
+  <h3 class="subgroup-title reveal">Kompetensi yang Ingin Dibangun</h3>
+  <div class="card-grid card-grid--4 reveal">
+    <div class="competency-card competency-card--modern">
+      <span class="competency-card__icon">📚</span>
+      <h4>Kompetensi Pedagogik</h4>
+      <p>Menguasai strategi pembelajaran aktif, asesmen autentik, dan diferensiasi pembelajaran.</p>
+    </div>
+    <div class="competency-card competency-card--modern">
+      <span class="competency-card__icon">🧩</span>
+      <h4>Kompetensi Profesional</h4>
+      <p>Terus memperbarui penguasaan materi ajar dan mengintegrasikan teknologi.</p>
+    </div>
+    <div class="competency-card competency-card--modern">
+      <span class="competency-card__icon">💎</span>
+      <h4>Kompetensi Kepribadian</h4>
+      <p>Menjadi teladan dalam hal integritas, empati, dan cinta belajar.</p>
+    </div>
+    <div class="competency-card competency-card--modern">
+      <span class="competency-card__icon">🤝</span>
+      <h4>Kompetensi Sosial</h4>
+      <p>Membangun hubungan positif dengan orang tua dan komunitas sekolah.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RIWAYAT PENDIDIKAN ============ -->
+<section id="pendidikan" class="section education">
+  <div class="section__head reveal">
+    <div class="section-badge section-badge--modern"><i class="fa-solid fa-graduation-cap"></i> Riwayat Pendidikan</div>
+    <h2 class="section__title">Perjalanan Akademik</h2>
+    <p class="section__lede">Jejak pendidikan formal yang membentuk kompetensi profesional saya sebagai calon guru SD.</p>
+  </div>
+
+  <div class="timeline">
+    <!-- PPG Prajabatan -->
+    <div class="timeline-item reveal ppg-era">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="edu-logo edu-logo-ppg">
+            <img src="images/Logo UNIKA.png" alt="Logo UNIKA" />
+          </div>
+          <div class="edu-info">
+            <span class="timeline-year">2026 - Sekarang</span>
+            <span class="badge-ongoing">🔄 Sedang Berlangsung</span>
+          </div>
+        </div>
+        <h3>PPG Prajabatan</h3>
+        <p class="institution">Universitas Katolik Santo Thomas, Medan</p>
+        <p>Program profesi guru yang membekali saya untuk menjadi pendidik profesional di bidang PGSD. Menempuh program PPG Prajabatan dengan tujuan menjadi pendidik profesional yang mampu menghadirkan pembelajaran bermakna, membentuk karakter peserta didik, dan berkontribusi nyata bagi kemajuan pendidikan di Indonesia.</p>
+      </div>
+    </div>
+
+    <!-- S1 PGSD -->
+    <div class="timeline-item reveal s1-era">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="edu-logo edu-logo-s1">
+            <span>🎓</span>
+          </div>
+          <div class="edu-info">
+            <span class="timeline-year">2020 - 2024</span>
+          </div>
+        </div>
+        <h3>S1 Pendidikan Guru Sekolah Dasar</h3>
+        <p class="institution">Universitas Samudra, Langsa, Aceh</p>
+        <p>Menyelesaikan studi S1 PGSD dengan fokus pada pembelajaran inovatif di sekolah dasar. Studi ini memberikan fondasi yang kuat dalam pedagogi, pengembangan kurikulum, dan manajemen kelas untuk menjadi seorang guru SD yang profesional.</p>
+      </div>
+    </div>
+
+    <!-- SMA -->
+    <div class="timeline-item reveal sma-era">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-card-header">
+          <div class="edu-logo edu-logo-sma">
+            <span>🎓</span>
+          </div>
+          <div class="edu-info">
+            <span class="timeline-year">2017 - 2020</span>
+          </div>
+        </div>
+        <h3>MAN 2 Aceh Tamiang</h3>
+        <p class="institution">Aceh Tamiang, Aceh</p>
+        <p>Menyelesaikan pendidikan SMA sebagai fondasi menuju dunia perkuliahan. Pengalaman di pendidikan menengah memberikan kemampuan berpikir kritis dan analitis yang menjadi dasar dalam menjalani studi ketarunaan di bidang keguruan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROFIL LPTK & SEKOLAH ============ -->
+<section id="profil-lptk" class="section section--alt">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Profil Institusi ✦</p>
+    <h2 class="section__title">LPTK & Sekolah Praktik</h2>
+    <p class="section__lede">Tempat saya menimba ilmu dan melaksanakan Praktik Pengalaman Lapangan (PPL) Terbimbing.</p>
+  </div>
+
+  <div class="institusi-grid reveal">
+    <!-- Card 1: UNIKA Santo Thomas -->
+    <div class="institusi-card">
+      <div class="institusi-header">
+        <img src="images/Unika Santo Thomas.jpg" alt="Universitas Katolik Santo Thomas Medan" />
+        <span class="institusi-badge">LPTK</span>
+      </div>
+      <div class="institusi-body">
+        <div class="institusi-content">
+          <div class="institusi-text">
+            <h3>UNIKA Santo Thomas Medan</h3>
+            <p class="institusi-desc">
+              Universitas Katolik Santo Thomas adalah perguruan tinggi katolik yang terletak di Medan, Sumatera Utara. Didirikan pada tanggal 30 Juni 1984, universitas ini memiliki visi menjadi pusat pengembangan ilmu pengetahuan, teknologi, dan seni berdasarkan nilai-nilai Katolik. UNIKA menyediakan berbagai program studi termasuk Pendidikan Guru Sekolah Dasar (PGSD) yang terakreditasi dan berkualitas.
+            </p>
+          </div>
+          <div class="institusi-bottom">
+            <div class="institusi-meta">
+              <div class="meta-item">
+                <span class="meta-label">📍 Alamat</span>
+                <span class="meta-value">Jl. Setiabudi No. 479, Tj. Sari, Kec. Medan Selayang, Kota Medan, Sumatera Utara 20122</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">🎓 Program Studi</span>
+                <span class="meta-value">Pendidikan Guru Sekolah Dasar (PGSD)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">📋 Program</span>
+                <span class="meta-value">PPG Prajabatan</span>
+              </div>
+            </div>
+            <div class="institusi-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.189186427092!2d98.61986297315272!3d3.5437894964304437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303125776056f2f9%3A0x5c0b06ec6e0c366!2sUniversitas%20Katolik%20Santo%20Thomas%20Medan!5e0!3m2!1sid!2sid!4v1781708091557!5m2!1sid!2sid" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta UNIKA Santo Thomas"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: SD Negeri 067241 -->
+    <div class="institusi-card">
+      <div class="institusi-header">
+        <img src="images/Sekolah Dasar Negeri 067241.jpeg" alt="UPT SD Negeri 067241 Medan" />
+        <span class="institusi-badge">SEKOLAH</span>
+      </div>
+      <div class="institusi-body">
+        <div class="institusi-content">
+          <div class="institusi-text">
+            <h3>UPT SD Negeri 067241 Medan</h3>
+            <p class="institusi-desc">
+              UPT SD Negeri 067241 Medan adalah sekolah dasar negeri yang terletak di kota Medan. Sekolah ini memiliki lingkungan belajar yang kondusif dan dukungan dari tenaga pengajar yang profesional. Selama PPL Terbimbing, saya mendapat kesempatan untuk mengaplikasikan pengetahuan pedagogik dalam pembelajaran di kelas.
+            </p>
+          </div>
+          <div class="institusi-bottom">
+            <div class="institusi-meta">
+              <div class="meta-item">
+                <span class="meta-label">📍 Alamat</span>
+                <span class="meta-value">Jl. Jermal I, Denai, Kec. Medan Denai, Kota Medan, Sumatera Utara 20227</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">📚 Jenjang</span>
+                <span class="meta-value">Sekolah Dasar (SD)</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">👨‍🏫 Kelas Praktik</span>
+                <span class="meta-value">Kelas I - VI</span>
+              </div>
+            </div>
+            <div class="institusi-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.0303226015135!2d98.72959197315296!3d3.580507996393649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131275025adc3%3A0xb5fe6b127cf96388!2sSekolah%20Dasar%20Negeri%20067241!5e0!3m2!1sid!2sid!4v1781708500532!5m2!1sid!2sid" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Peta SD Negeri 067241 Medan"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTEFAK ============ -->
+<section id="artefak" class="section section--alt">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Portofolio Artefak (3 Siklus) ✦</p>
+    <h2 class="section__title">Artefak Produk Pembelajaran</h2>
+    <p class="section__lede">Kumpulan perangkat pembelajaran yang disusun selama 3 siklus PPL Terbimbing.</p>
+  </div>
+
+  <div class="filters reveal">
+    <div class="filter-group" data-filter-group="siklus">
+      <button class="filter-chip filter-chip--modern is-active" data-filter="all">Semua Siklus</button>
+      <button class="filter-chip filter-chip--modern" data-filter="siklus-1">Siklus 1</button>
+      <button class="filter-chip filter-chip--modern" data-filter="siklus-2">Siklus 2</button>
+      <button class="filter-chip filter-chip--modern" data-filter="siklus-3">Siklus 3</button>
+    </div>
+  </div>
+
+  <div class="artefak-grid reveal" id="artefak-grid">
+    <article class="artefak-card artefak-card--modern" data-siklus="siklus-1" data-jenis="rpp">
+      <div class="artefak-card__badges"><span class="badge badge--modern">Siklus 1</span></div>
+      <h3>RPP Siklus 1</h3>
+      <p>Rencana Pelaksanaan Pembelajaran siklus pertama untuk IPAS Kelas VI tema Kebudayaan Daerahku.</p>
+      <a href="#" class="artefak-card__link">Buka di Google Drive ↗</a>
+    </article>
+    <article class="artefak-card artefak-card--modern" data-siklus="siklus-1" data-jenis="media">
+      <div class="artefak-card__badges"><span class="badge badge--highlight">⭐ Unggulan</span></div>
+      <h3>Media WebAR — Kebudayaan Daerahku</h3>
+      <p>Media pembelajaran berbasis WebAR untuk topik Kebudayaan Daerahku Kelas VI.</p>
+      <a href="#" class="artefak-card__link">Buka di Google Drive ↗</a>
+    </article>
+    <article class="artefak-card artefak-card--modern" data-siklus="siklus-2" data-jenis="rpp">
+      <div class="artefak-card__badges"><span class="badge badge--modern">Siklus 2</span></div>
+      <h3>RPP Siklus 2</h3>
+      <p>RPP siklus kedua yang dikembangkan berdasarkan hasil refleksi siklus 1.</p>
+      <a href="#" class="artefak-card__link">Buka di Google Drive ↗</a>
+    </article>
+    <article class="artefak-card artefak-card--modern" data-siklus="siklus-3" data-jenis="rpp">
+      <div class="artefak-card__badges"><span class="badge badge--modern">Siklus 3</span></div>
+      <h3>RPP Siklus 3</h3>
+      <p>RPP siklus ketiga sebagai puncak implementasi rangkaian PPL Terbimbing.</p>
+      <a href="#" class="artefak-card__link">Buka di Google Drive ↗</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ANALISIS ============ -->
+<section id="analisis" class="section">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Analisis Artefak ✦</p>
+    <h2 class="section__title">Refleksi Mendalam</h2>
+    <p class="section__lede">Klik salah satu kartu untuk membuka refleksi lengkap.</p>
+  </div>
+
+  <div class="analisis-grid reveal">
+    <button class="analisis-card analisis-card--modern" data-modal="kendala">
+      <span class="analisis-card__num">Aspek 1</span>
+      <h3>Kendala Penyusunan</h3>
+      <p>Tantangan referensi WebAR, kesenjangan literasi digital siswa, keterbatasan perangkat.</p>
+      <span class="analisis-card__cta">Baca Refleksi →</span>
+    </button>
+    <button class="analisis-card analisis-card--modern" data-modal="teori">
+      <span class="analisis-card__num">Aspek 2</span>
+      <h3>Teori & Konsep Pedagogi</h3>
+      <p>Konstruktivisme, Project-Based Learning, TPACK, dan diferensiasi pembelajaran.</p>
+      <span class="analisis-card__cta">Baca Refleksi →</span>
+    </button>
+  </div>
+</section>
+
+<!-- Modal templates -->
+<div class="modal-templates" hidden>
+  <div class="modal-content" id="modal-kendala">
+    <h3>Aspek 1 — Kendala yang Terjadi</h3>
+    <p>Selama proses penyusunan perangkat pembelajaran, terdapat beberapa kendala:</p>
+    <ul>
+      <li>Keterbatasan referensi perangkat pembelajaran berbasis WebAR untuk jenjang SD</li>
+      <li>Kesenjangan kemampuan awal siswa yang cukup bervariasi</li>
+      <li>Keterbatasan perangkat teknologi di sekolah</li>
+    </ul>
+  </div>
+  <div class="modal-content" id="modal-teori">
+    <h3>Aspek 2 — Teori atau Konsep Pedagogi</h3>
+    <p>Penyusunan perangkat pembelajaran berpijak pada:</p>
+    <ul>
+      <li><strong>Konstruktivisme:</strong> Siswa aktif membangun pengetahuannya sendiri</li>
+      <li><strong>Project-Based Learning:</strong> Proyek nyata yang relevan dengan budaya lokal</li>
+      <li><strong>TPACK:</strong> Integrasi teknologi, konten, dan pedagogik</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal modal--modern" role="dialog" aria-modal="true">
+    <button class="modal__close" id="modal-close" aria-label="Tutup">✕</button>
+    <div class="modal__body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ============ KONTAK ============ -->
+<section id="kontak" class="section kontak">
+  <div class="section__head reveal">
+    <p class="eyebrow eyebrow--modern">✦ Kontak ✦</p>
+    <h2 class="section__title">Mari Terhubung</h2>
+    <p class="section__lede">Terbuka untuk diskusi seputar pendidikan dasar dan pengembangan media WebAR.</p>
+  </div>
+
+  <div class="kontak-grid reveal">
+    <div class="kontak-info">
+      <div class="kontak-info__item">
+        <span class="kontak-info__icon">✉️</span>
+        <div><span class="kontak-info__label">Email</span><span class="kontak-info__value">namaanda@email.com</span></div>
+      </div>
+      <div class="kontak-info__item">
+        <span class="kontak-info__icon">💬</span>
+        <div><span class="kontak-info__label">WhatsApp</span><span class="kontak-info__value">+62 8xx-xxxx-xxxx</span></div>
+      </div>
+    </div>
+    <form class="kontak-form kontak-form--modern" id="kontak-form">
+      <div class="form-row">
+        <label for="f-name">Nama Lengkap</label>
+        <input type="text" id="f-name" name="name" required placeholder="Nama Anda">
+      </div>
+      <div class="form-row">
+        <label for="f-email">Email</label>
+        <input type="email" id="f-email" name="email" required placeholder="email@contoh.com">
+      </div>
+      <div class="form-row">
+        <label for="f-message">Pesan</label>
+        <textarea id="f-message" name="message" rows="4" required placeholder="Tulis pesan Anda..."></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--modern">Kirim Pesan 🚀</button>
+      <p class="form-success" id="form-success" hidden>✅ Pesan berhasil terkirim!</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer footer--modern">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="images/Logo UNIKA.png" alt="Logo UNIKA" class="navbar__mark navbar__mark--modern" />
+      <p>Muhammad Rizki Wardana, S.Pd.<br>Calon Guru SD — PGSD<br>PPG Prajabatan, UNIKA Santo Thomas Medan</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#hero">Beranda</a>
+      <a href="#profil">Profil</a>
+      <a href="#artefak">Artefak</a>
+      <a href="#kontak">Kontak</a>
+      <a href="index.html">← Landing</a>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026 Muhammad Rizki Wardana, S.Pd. — E-Portfolio 1, PPG Prajabatan PGSD.</p>
+  </div>
+</footer>
+
+<!-- Floating Back to Top -->
+<a href="#hero" class="back-to-top-float" aria-label="Kembali ke atas">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
