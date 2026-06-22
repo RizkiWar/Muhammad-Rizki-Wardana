@@ -712,7 +712,7 @@ body.portfolio-page {
 }
 
 html[data-theme="dark"] body.portfolio-page {
-  background: url("images/Body Dark.png") center/cover fixed no-repeat !important;
+  background: url("images/Body-Dark.png") center/cover fixed no-repeat !important;
 }
 
 /* Palette overrides for portfolio pages to harmonize with Background-Porto */
@@ -783,7 +783,7 @@ p { line-height: 1.7; margin: 0 0 1rem; color: var(--color-ink-soft); }
     linear-gradient(-45deg, var(--color-gold) 25%, transparent 25%) 0 0 / 20px 20px,
     linear-gradient(135deg, #8B4513 20%, transparent 20%) 0 0 / 16px 16px,
     linear-gradient(-135deg, #8B4513 20%, transparent 20%) 0 0 / 16px 16px,
-    #5D3A1A);
+    #5D3A1A;
 }
 
 /* =================== Hero Background Pattern Aceh =================== */
@@ -1968,7 +1968,7 @@ html[data-theme="dark"] .scroll-cue svg {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   background: linear-gradient(rgba(27, 107, 74, 0.45), rgba(15, 74, 50, 0.55)),
-              url('images/Bupati Aceh Tamiang.png') center/cover no-repeat;
+              url('images/Busik-Aceh-Tamiang.png') center/cover no-repeat;
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -2896,8 +2896,6 @@ html[data-theme="dark"] .scroll-cue svg {
 [data-theme="dark"] .education:not(.section--alt) .timeline-card {
   box-shadow: var(--shadow-soft);
 }
-}
-
 [data-theme="dark"] .education:not(.section--alt) .timeline-item:nth-child(odd) .timeline-card {
   border-left-color: var(--color-primary);
 }

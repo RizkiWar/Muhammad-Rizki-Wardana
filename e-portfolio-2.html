@@ -14,7 +14,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);background:url("images/Background-Porto.png") center/cover fixed no-repeat,var(--bg);color:var(--ink);line-height:1.7;font-size:16px;min-height:100vh}
-html[data-theme="dark"] body{background:url("images/Body Dark.png") center/cover fixed no-repeat!important}
+html[data-theme="dark"] body{background:url("images/Body-Dark.png") center/cover fixed no-repeat!important}
 .navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,251,252,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:64px}
 .navbar__inner{max-width:1120px;margin:0 auto;padding:0 2rem;height:100%;display:flex;align-items:center;justify-content:space-between}
 .navbar__brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
@@ -346,7 +346,7 @@ html[data-theme="dark"] .flip-card-container.theory .flip-indicator {
 <header class="navbar">
   <div class="navbar__inner">
     <a href="#" class="navbar__brand">
-      <img src="images/Logo UNIKA.png" alt="Logo UNIKA" class="navbar__logo" />
+      <img src="images/Logo-UNIKA.png" alt="Logo UNIKA" class="navbar__logo" />
       <span class="navbar__name">Muhammad Rizki Wardana<br><span class="navbar__role">E-Portfolio 2</span></span>
     </a>
     <nav class="navbar__nav">
@@ -720,7 +720,7 @@ html[data-theme="dark"] .flip-card-container.theory .flip-indicator {
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__brand">
-      <img src="images/Logo UNIKA.png" alt="Logo UNIKA" />
+      <img src="images/Logo-UNIKA.png" alt="Logo UNIKA" />
       <p>Muhammad Rizki Wardana, S.Pd.<br>Calon Guru SD, PGSD<br>PPG Prajabatan, UNIKA Santo Thomas Medan</p>
     </div>
     <nav class="footer__nav">
@@ -744,7 +744,7 @@ const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 const heroBg = document.querySelector('.hero__bg-image');
 const heroBgLight = 'images/Background-Header.png';
-const heroBgDark = 'images/Hero Dark.png';
+const heroBgDark = 'images/Hero-Dark.png';
 themeToggle.addEventListener('click', () => {
   const isDark = html.getAttribute('data-theme') === 'dark';
   const next = isDark ? 'light' : 'dark';
