@@ -702,17 +702,17 @@ body {
 body.landing-page {
   background:
     linear-gradient(rgba(6,6,6,0.25), rgba(6,6,6,0.25)),
-    url("images/Background-LandingPage.png") center/cover fixed no-repeat;
+    url("Images/Background-LandingPage.png") center/cover fixed no-repeat;
   color: var(--color-cream);
 }
 
 body.portfolio-page {
-  background: url("images/Background-Porto.png") center/cover fixed no-repeat;
+  background: url("Images/Background-Porto.png") center/cover fixed no-repeat;
   color: var(--color-ink);
 }
 
 html[data-theme="dark"] body.portfolio-page {
-  background: url("images/Body-Dark.png") center/cover fixed no-repeat !important;
+  background: url("Images/Body-Dark.png") center/cover fixed no-repeat !important;
 }
 
 /* Palette overrides for portfolio pages to harmonize with Background-Porto */
@@ -1968,7 +1968,7 @@ html[data-theme="dark"] .scroll-cue svg {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   background: linear-gradient(rgba(27, 107, 74, 0.45), rgba(15, 74, 50, 0.55)),
-              url('images/Busik-Aceh-Tamiang.png') center/cover no-repeat;
+              url('Images/Busik-Aceh-Tamiang.png') center/cover no-repeat;
   border-radius: var(--radius);
   padding: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
