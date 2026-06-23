@@ -1603,6 +1603,58 @@ html[data-theme="dark"] .scroll-cue svg {
   border-radius: var(--radius-sm);
 }
 
+/* Web Preview */
+.artefak-preview--web {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-alt);
+}
+
+.artefak-preview--web .preview-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.artefak-preview--web:hover .preview-overlay {
+  opacity: 0;
+}
+
+.preview-play {
+  width: 50px;
+  height: 50px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
 .preview-badge {
   position: absolute;
   top: 8px;
