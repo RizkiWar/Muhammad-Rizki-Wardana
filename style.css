@@ -1580,7 +1580,6 @@ html[data-theme="dark"] .scroll-cue svg {
   position: relative;
   background: linear-gradient(135deg, var(--color-bg-alt), var(--color-surface));
   border-radius: var(--radius-sm);
-  padding: 1rem;
   margin-bottom: 0.75rem;
   border: 1px solid var(--color-line);
   overflow: hidden;
@@ -1594,139 +1593,14 @@ html[data-theme="dark"] .scroll-cue svg {
   right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: 1;
 }
 
-.preview-doc {
-  background: var(--color-surface);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  overflow: hidden;
-}
-
-.preview-doc__header {
-  background: #f8f9fa;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid var(--color-line);
-}
-
-[data-theme="dark"] .preview-doc__header {
-  background: #1a1d24;
-}
-
-.preview-doc__dots {
-  display: flex;
-  gap: 4px;
-}
-
-.preview-doc__dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ccc;
-}
-
-.preview-doc__dots span:nth-child(1) { background: #ff5f56; }
-.preview-doc__dots span:nth-child(2) { background: #ffbd2e; }
-.preview-doc__dots span:nth-child(3) { background: #27ca40; }
-
-.preview-doc__title-bar {
-  flex: 1;
-  font-size: 0.75rem;
-  color: var(--color-ink-soft);
-  font-family: var(--font-mono);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.preview-doc__body {
-  padding: 12px;
-}
-
-.preview-doc__line {
-  height: 8px;
-  background: var(--color-bg-alt);
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-
-.preview-doc__line.long { width: 90%; }
-.preview-doc__line.medium { width: 60%; }
-.preview-doc__line.short { width: 40%; margin-bottom: 0; }
-
-.preview-doc__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-top: 12px;
-}
-
-.preview-doc__grid-item {
-  background: var(--color-bg-alt);
-  padding: 8px 4px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  text-align: center;
-  color: var(--color-ink-soft);
-}
-
-/* Math Preview */
-.preview-doc--math .preview-doc__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.preview-doc__formula {
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-.frac {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: middle;
-  margin: 0 4px;
-  font-size: 0.9rem;
-}
-
-.frac span:first-child {
-  border-bottom: 2px solid var(--color-primary);
-  padding: 0 4px 2px;
-}
-
-.frac span:last-child {
-  padding: 2px 4px 0;
-}
-
-.preview-doc__icons {
-  display: flex;
-  gap: 8px;
-  font-size: 1.2rem;
-}
-
-.preview-doc__fractions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-.preview-doc__arrow {
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+.preview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
 }
 
 .preview-badge {
