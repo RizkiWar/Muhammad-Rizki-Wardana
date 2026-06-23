@@ -4,7 +4,12 @@
       "Bash(sed -i 's|docs.google.com/document/d/1hmxuYesebKWDldVDcysMH7Ch3b2wIPK/preview|docs.google.com/document/d/1hmxuYesebKWDldVDcysMH7Ch3b2wIPK/edit|g' e-portfolio-1.html)",
       "Bash(sed -i 's|docs.google.com/document/d/1VoR31v1LTXrwVSJ0klTm8-oMJNK9Ffc6/preview|docs.google.com/document/d/1VoR31v1LTXrwVSJ0klTm8-oMJNK9Ffc6/edit|g' e-portfolio-1.html)",
       "Bash(sed -i 's|docs.google.com/document/d/1yd4PWapq9MiDa0x-vAp_OMKNdG27A2il/preview|docs.google.com/document/d/1yd4PWapq9MiDa0x-vAp_OMKNdG27A2il/edit|g' e-portfolio-1.html)",
-      "Read(//d/Tugas PPG/PPL/E-Portofolio/E-Portofolio_PPG_Prajabatan-2026-main/E-Portofolio_PPG_Prajabatan_2026-main/Muhammad Rizki Wardana/**)"
+      "Read(//d/Tugas PPG/PPL/E-Portofolio/E-Portofolio_PPG_Prajabatan-2026-main/E-Portofolio_PPG_Prajabatan_2026-main/Muhammad Rizki Wardana/**)",
+      "Read(//d/Tugas PPG/PPL/E-Portofolio/E-Portofolio_PPG_Prajabatan-2026-main/E-Portofolio_PPG_Prajabatan-2026-main/Muhammad Rizki Wardana/**)",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-0o-2o-docstext.googleusercontent.com)",
+      "WebFetch(domain:doc-14-2o-docstext.googleusercontent.com)",
+      "WebFetch(domain:doc-0g-2o-docstext.googleusercontent.com)"
     ]
   }
 }
