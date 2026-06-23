@@ -1152,6 +1152,7 @@ html[data-theme="dark"] .scroll-cue svg {
 [data-theme="dark"] .filter-chip.is-active { color: var(--color-ink); }
 
 .artefak-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.artefak-grid .siklus-group { grid-column: 1 / -1; }
 .artefak-card {
   background: var(--color-surface); border: 1px solid var(--color-line);
   border-radius: var(--radius-sm); padding: 1.4rem;
@@ -1167,6 +1168,15 @@ html[data-theme="dark"] .scroll-cue svg {
 }
 .badge--siklus { background: var(--color-emerald); color: var(--color-cream); }
 [data-theme="dark"] .badge--siklus { color: var(--color-ink); }
+.badge--modul { background: var(--color-maroon); color: var(--color-cream); }
+.badge--media { background: var(--color-gold); color: var(--color-ink); }
+.badge--lkpd { background: var(--color-emerald); color: var(--color-cream); }
+[data-theme="dark"] .badge--modul { background: var(--color-gold); color: var(--color-ink); }
+[data-theme="dark"] .badge--media { background: var(--color-gold); color: var(--color-ink); }
+[data-theme="dark"] .badge--lkpd { background: var(--color-emerald); color: var(--color-cream); }
+.siklus-group { margin-top: 1rem; clear: both; }
+.siklus-group h3 { font-family: var(--font-display); font-size: 1.2rem; border-bottom: 2px solid var(--color-gold); padding-bottom: 0.5rem; margin-bottom: 1rem; color: var(--color-ink); }
+[data-theme="dark"] .siklus-group h3 { color: var(--color-ink); border-color: var(--color-gold); }
 .badge--jenis { background: var(--color-bg-alt); color: var(--color-ink-soft); border: 1px solid var(--color-line); }
 .artefak-card h3 { font-size: 1.05rem; }
 .artefak-card p { font-size: .9rem; margin: 0; flex-grow: 1; }
