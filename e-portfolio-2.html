@@ -203,69 +203,25 @@ html[data-theme="dark"] .flip-card-container.theory .challenge-card p{color:var(
 html[data-theme="dark"] .flip-card-container.theory .flip-indicator{color:#fcd34d}
 </style>
 <style>
-/* Kontak Section */
-.kontak-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 2rem auto 0;
-}
-
-.kontak-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  transition: all 0.3s ease;
-}
-
-.kontak-item:hover {
-  border-color: var(--primary);
-  box-shadow: 0 4px 15px rgba(27, 107, 74, 0.15);
-  transform: translateX(5px);
-}
-
-.kontak-icon {
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--primary);
-  color: #fff;
-  border-radius: 50%;
-}
-
-.kontak-item > div {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.kontak-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.kontak-value {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--ink);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.kontak-value:hover {
-  color: var(--primary);
-}
+/* Kontak Section - Same as e-portfolio-1 */
+.kontak-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; }
+.kontak-info { display: flex; flex-direction: column; gap: 1.4rem; }
+.kontak-info__item { display: flex; align-items: flex-start; gap: 1rem; }
+.kontak-info__icon { font-size: 1.4rem; }
+.kontak-info__label { display: block; font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+.kontak-info__value { display: block; font-weight: 600; font-size: 1.02rem; text-decoration: none; color: var(--ink); }
+.kontak-info__value:hover { color: var(--primary); }
+.kontak-form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 2rem; }
+.kontak-form--modern { border-top: 4px solid var(--primary); }
+.kontak-form--modern input:focus, .kontak-form--modern textarea:focus { outline-color: var(--primary); }
+.form-row { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.form-row label { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+.form-row input, .form-row textarea { padding: 0.75rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg); color: var(--ink); font-family: inherit; font-size: 0.95rem; }
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-success { margin-top: 1rem; padding: 0.75rem; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--success); border-radius: var(--radius-sm); color: var(--success); text-align: center; font-weight: 500; }
+.btn--primary { background: var(--primary); color: #fff; border: none; padding: 0.85rem 1.5rem; border-radius: var(--radius-sm); font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.btn--primary:hover { background: var(--primary-dark); }
+@media (max-width: 860px) { .kontak-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -643,34 +599,44 @@ html[data-theme="dark"] .flip-card-container.theory .flip-indicator{color:#fcd34
   </section>
 
   <!-- ============ KONTAK ============ -->
-  <section class="section" id="kontak-lengkap">
-    <div class="section__head">
-      <span class="eyebrow">✦ Kontak ✦</span>
+  <section class="section kontak" id="kontak-lengkap">
+    <div class="section__head reveal">
+      <p class="eyebrow eyebrow--modern">✦ Kontak ✦</p>
       <h2 class="section__title">Mari Terhubung</h2>
       <p class="section__lede">Terbuka untuk diskusi seputar pendidikan dasar dan pengembangan media WebAR.</p>
     </div>
-    <div class="kontak-list">
-      <div class="kontak-item">
-        <span class="kontak-icon">✉️</span>
-        <div>
-          <span class="kontak-label">Email</span>
-          <a href="mailto:rizkiwardana1308@gmail.com" class="kontak-value">rizkiwardana1308@gmail.com</a>
+
+    <div class="kontak-grid reveal">
+      <div class="kontak-info">
+        <div class="kontak-info__item">
+          <span class="kontak-info__icon">✉️</span>
+          <div><span class="kontak-info__label">Email</span><a href="mailto:rizkiwardana1308@gmail.com" class="kontak-info__value">rizkiwardana1308@gmail.com</a></div>
+        </div>
+        <div class="kontak-info__item">
+          <span class="kontak-info__icon">🔗</span>
+          <div><span class="kontak-info__label">LinkedIn</span><a href="https://www.linkedin.com/in/muhammad-rizki-wardana-0b6314338" target="_blank" class="kontak-info__value">Muhammad Rizki Wardana</a></div>
+        </div>
+        <div class="kontak-info__item">
+          <span class="kontak-info__icon">📸</span>
+          <div><span class="kontak-info__label">Instagram</span><a href="https://www.instagram.com/rizki_wardana08" target="_blank" class="kontak-info__value">@rizki_wardana08</a></div>
         </div>
       </div>
-      <div class="kontak-item">
-        <span class="kontak-icon">🔗</span>
-        <div>
-          <span class="kontak-label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/muhammad-rizki-wardana-0b6314338" target="_blank" class="kontak-value">Muhammad Rizki Wardana</a>
+      <form class="kontak-form kontak-form--modern" id="kontak-form">
+        <div class="form-row">
+          <label for="f-name">Nama Lengkap</label>
+          <input type="text" id="f-name" name="name" required placeholder="Nama Anda">
         </div>
-      </div>
-      <div class="kontak-item">
-        <span class="kontak-icon">📸</span>
-        <div>
-          <span class="kontak-label">Instagram</span>
-          <a href="https://www.instagram.com/rizki_wardana08" target="_blank" class="kontak-value">@rizki_wardana08</a>
+        <div class="form-row">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required placeholder="email@contoh.com">
         </div>
-      </div>
+        <div class="form-row">
+          <label for="f-message">Pesan</label>
+          <textarea id="f-message" name="message" rows="4" required placeholder="Tulis pesan Anda..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--modern">Kirim Pesan 🚀</button>
+        <p class="form-success" id="form-success" hidden>✅ Pesan berhasil terkirim!</p>
+      </form>
     </div>
   </section>
 </main>
