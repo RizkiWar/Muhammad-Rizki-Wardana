@@ -107,6 +107,7 @@
   /* ---------- Artefak filters (siklus + jenis) ---------- */
   const filterGroups = document.querySelectorAll(".filter-group");
   const artefakCards = document.querySelectorAll(".artefak-card");
+  const siklusGroups = document.querySelectorAll(".siklus-group");
   const artefakEmpty = document.getElementById("artefak-empty");
   const activeFilters = { siklus: "all", jenis: "all" };
 
@@ -124,6 +125,20 @@
 
   function applyFilters() {
     let visibleCount = 0;
+    const currentSiklus = activeFilters.siklus;
+
+    // Hide all siklus group headers first
+    siklusGroups.forEach((group) => {
+      group.style.display = "none";
+    });
+
+    // If "all" siklus is selected, show headers inline with cards
+    if (currentSiklus === "all") {
+      siklusGroups.forEach((group) => {
+        group.style.display = "";
+      });
+    }
+
     artefakCards.forEach((card) => {
       const matchesSiklus = activeFilters.siklus === "all" || card.dataset.siklus === activeFilters.siklus;
       const matchesJenis = activeFilters.jenis === "all" || card.dataset.jenis === activeFilters.jenis;
